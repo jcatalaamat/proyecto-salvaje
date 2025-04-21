@@ -45,7 +45,7 @@ export default function Navbar() {
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             <a href="#" className="text-2xl font-serif font-bold text-earth-900">
-              Salvaje
+              Proyecto Salvaje
             </a>
           </div>
           

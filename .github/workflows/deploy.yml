@@ -65,11 +65,6 @@ jobs:
           # Make sure CNAME file exists
           echo "proyectosalvaje.com" > CNAME
 
-          # Add <title> tag directly to index.html if needed
-          if ! grep -q "<title" index.html; then
-            sed -i 's/<head>/<head><title>Proyecto Salvaje | Regenerative Village School<\/title>/' index.html
-          fi
-
           # Commit and push
           git add -A
           git commit -m "Deploy website to GitHub Pages"
