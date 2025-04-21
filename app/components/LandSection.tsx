@@ -18,15 +18,14 @@ const landFeatures = [
     description: "Located on the coast of Oaxaca where the Sierra Madre meets the Pacific Ocean, with proximity to lagoons and mangroves.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-        {/* Simple ocean wave */}
-        <path d="M3 10c2.5 2 5 2 7.5 0s5-2 7.5 0l3 2" />
-        <path d="M3 14c2.5 2 5 2 7.5 0s5-2 7.5 0l3 2" />
-        {/* Simple tree */}
-        <path d="M8 20v-4" />
-        <path d="M16 20v-4" />
-        <path d="M6 12l2-2 2 2 2-2 2 2 2-2 2 2" />
-        <path d="M8 10v-2" />
-        <path d="M16 10v-2" />
+        {/* Simple ocean waves */}
+        <path d="M4 12c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0" />
+        <path d="M4 16c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0" />
+        {/* Simple tree/mangrove */}
+        <circle cx="8" cy="6" r="2" />
+        <line x1="8" y1="8" x2="8" y2="12" />
+        <circle cx="16" cy="7" r="2" />
+        <line x1="16" y1="9" x2="16" y2="12" />
       </svg>
     )
   },
