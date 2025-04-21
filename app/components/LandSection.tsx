@@ -18,14 +18,15 @@ const landFeatures = [
     description: "Located on the coast of Oaxaca where the Sierra Madre meets the Pacific Ocean, with proximity to lagoons and mangroves.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-        <path d="M17 14h.01" />
-        <path d="M7 7l2 3h4l-2-9-4 6Z" />
-        <path d="m11 11 2 1 4-4L9 3l2 8Z" />
-        <path d="M17 14h.01" />
-        <path d="M18 10c.5-1 2.5-3 3.5-3a2.5 2.5 0 0 1 0 5" />
-        <path d="M16.5 19A2.5 2.5 0 0 1 19 16.5c1.5 0 2.5 2 2.5 3.5a2.5 2.5 0 0 1-5 0Z" />
-        <path d="M13 19c-1 0-2 0-2.5-1.5a3 3 0 0 0-1-1.5 2.5 2.5 0 0 1 0-4 2.5 2.5 0 0 0 0-4" />
-        <path d="M5.7 14.8A2.5 2.5 0 0 0 6 19a2.5 2.5 0 0 1 0 5H4.5c-1.5 0-3-2-2.5-4 .5-2 2-3 4-3Z" />
+        {/* Simple ocean wave */}
+        <path d="M3 10c2.5 2 5 2 7.5 0s5-2 7.5 0l3 2" />
+        <path d="M3 14c2.5 2 5 2 7.5 0s5-2 7.5 0l3 2" />
+        {/* Simple tree */}
+        <path d="M8 20v-4" />
+        <path d="M16 20v-4" />
+        <path d="M6 12l2-2 2 2 2-2 2 2 2-2 2 2" />
+        <path d="M8 10v-2" />
+        <path d="M16 10v-2" />
       </svg>
     )
   },
@@ -34,12 +35,16 @@ const landFeatures = [
     description: "Nestled in front of a natural reserve with unique topography that makes it perfect for this project.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-        <path d="M3 7h3c2 0 4 1 4 3s-2 3-4 3H3v4"/>
-        <path d="M14 7h1.5a2.5 2.5 0 1 1 0 5H14"/>
-        <path d="M14 12h2.5a2.5 2.5 0 1 1 0 5H14v-9.5"/>
-        <path d="M5 15a2 2 0 1 0 4 0 2 2 0 1 0-4 0z"/>
-        <path d="M15 5a2 2 0 1 0 4 0 2 2 0 1 0-4 0z"/>
-        <path d="M19 12a2 2 0 1 0 0-4"/>
+        {/* Simple mountains */}
+        <path d="M8 18L12 9 16 18" />
+        <path d="M3 18L7 10 11 18" />
+        <path d="M13 18L17 10 21 18" />
+        {/* Simple sun */}
+        <circle cx="19" cy="5" r="2" />
+        <line x1="19" y1="1" x2="19" y2="3" />
+        <line x1="19" y1="7" x2="19" y2="9" />
+        <line x1="15" y1="5" x2="17" y2="5" />
+        <line x1="21" y1="5" x2="23" y2="5" />
       </svg>
     )
   },
@@ -48,9 +53,13 @@ const landFeatures = [
     description: "Access to water, flat areas for permaculture, and hills offering open views, perfect for sustainable development.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-        <path d="M2 22c1.25-1.25 2.5-2 4-2 1.5 0 2.75.75 4 2 1.25-1.25 2.5-2 4-2 1.5 0 2.75.75 4 2"/>
-        <path d="M2 16c1.25-1.25 2.5-2 4-2 1.5 0 2.75.75 4 2 1.25-1.25 2.5-2 4-2 1.5 0 2.75.75 4 2"/>
-        <path d="M2 10c1.25-1.25 2.5-2 4-2 1.5 0 2.75.75 4 2 1.25-1.25 2.5-2 4-2 1.5 0 2.75.75 4 2"/>
+        {/* Water drop */}
+        <path d="M12 2L8 10C6 14 8 18 12 18C16 18 18 14 16 10L12 2Z" />
+        {/* Horizontal land */}
+        <line x1="3" y1="22" x2="21" y2="22" />
+        {/* Plant */}
+        <line x1="12" y1="18" x2="12" y2="22" />
+        <path d="M9 20L15 20" />
       </svg>
     )
   },
@@ -59,7 +68,8 @@ const landFeatures = [
     description: "Spread along small pathways that provide privacy, with a sense of deep peace — being both protected and connected.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-        <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
+        {/* Home */}
+        <path d="M3 12L5 10M5 10L12 3L19 10M5 10V20C5 20.5523 5.44772 21 6 21H9M19 10L21 12M19 10V20C19 20.5523 18.5523 21 18 21H15M9 21C9.55228 21 10 20.5523 10 20V16C10 15.4477 10.4477 15 11 15H13C13.5523 15 14 15.4477 14 16V20C14 20.5523 14.4477 21 15 21M9 21H15" />
       </svg>
     )
   }
