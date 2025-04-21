@@ -96,7 +96,7 @@ const visionPillars = [
         <path d="M8 12H16" stroke="currentColor" strokeWidth="1" />
       </svg>
     ),
-    color: "bg-gradient-to-br from-ocean-50 to-ocean-100 border-l-4 border-ocean-500",
+    color: "bg-gradient-to-br from-terracotta-100 to-terracotta-200 border-l-4 border-terracotta-500",
     texture: "bg-[url('/images/textures/handmade-paper.png')]"
   }
 ];
