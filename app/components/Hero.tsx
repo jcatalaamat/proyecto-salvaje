@@ -144,7 +144,7 @@ export default function Hero() {
             className="font-serif text-[22px] md:text-5xl text-[#3b2f2f] mb-6 leading-snug md:leading-tight tracking-tight"
             style={{ wordBreak: 'normal', overflowWrap: 'break-word', hyphens: 'manual' }}
           >
-            A regenerative village school for truth, healing,<br className="hidden md:block" /> and sovereign living
+            Creation of an intentional regenerative community for human integrity and sovereign living
           </h1>
           
           <motion.p 
@@ -153,7 +153,7 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="text-base md:text-lg text-[#5a4633] max-w-md mx-auto mb-8 font-serif italic font-light"
           >
-            A healing village and real-life school for future generations — rooted in dignity, integrity, and remembrance of the sacred.
+            A healing village, real-life school, and educational center dedicated to protecting freedom, bodily autonomy, and living in harmony with nature.
           </motion.p>
           
           <motion.div 

@@ -14,8 +14,8 @@ if (typeof window !== 'undefined') {
 // Land features data
 const landFeatures = [
   {
-    title: "Pristine Forest",
-    description: "30 hectares of protected primary and secondary forest, home to diverse flora and fauna.",
+    title: "Ocean & Mangroves",
+    description: "Located on the coast of Oaxaca where the Sierra Madre meets the Pacific Ocean, with proximity to lagoons and mangroves.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <path d="M17 14h.01" />
@@ -30,8 +30,8 @@ const landFeatures = [
     )
   },
   {
-    title: "Flowing Waters",
-    description: "Three pristine streams wind through the property, nurturing life and providing fresh water year-round.",
+    title: "Natural Reserve",
+    description: "Nestled in front of a natural reserve with unique topography that makes it perfect for this project.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <path d="M3 7h3c2 0 4 1 4 3s-2 3-4 3H3v4"/>
@@ -44,8 +44,8 @@ const landFeatures = [
     )
   },
   {
-    title: "Fertile Valleys",
-    description: "Expansive valleys with rich, volcanic soil perfect for regenerative agriculture and food forests.",
+    title: "Water Access",
+    description: "Access to water, flat areas for permaculture, and hills offering open views, perfect for sustainable development.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <path d="M2 22c1.25-1.25 2.5-2 4-2 1.5 0 2.75.75 4 2 1.25-1.25 2.5-2 4-2 1.5 0 2.75.75 4 2"/>
@@ -55,8 +55,8 @@ const landFeatures = [
     )
   },
   {
-    title: "Mountain Views",
-    description: "Breathtaking panoramic views of surrounding mountains and the Pacific Ocean in the distance.",
+    title: "Privacy & Connection",
+    description: "Spread along small pathways that provide privacy, with a sense of deep peace — being both protected and connected.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <path d="m8 3 4 8 5-5 5 15H2L8 3z"/>
@@ -94,31 +94,31 @@ const landDetails = [
   {
     title: "Topography & Access",
     details: [
-      "50 hectares of diverse landscape",
-      "Flat areas suitable for building",
-      "Hills and valleys for varying microclimates",
-      "Year-round water access from streams",
-      "Maintained road access to the property"
+      "12 acres of diverse landscape",
+      "Flat areas suitable for permaculture",
+      "Hills offering open scenic views",
+      "Year-round water access",
+      "Private road access to the property"
     ]
   },
   {
-    title: "Cultural Importance",
+    title: "Location & Community",
     details: [
-      "Located near Mazunte village",
-      "Rich in indigenous heritage",
-      "Vibrant local community energy",
-      "Close to sacred ceremonial sites",
-      "Supportive neighboring villages"
+      "Near the town of Mazunte, Oaxaca",
+      "1 hour from an international airport",
+      "Connected to Oaxaca by highway",
+      "Vibrant community of eclectic people",
+      "Various collective initiatives nearby"
     ]
   },
   {
     title: "Development Potential",
     details: [
-      "Space for 20+ sustainable homes",
-      "Last undeveloped piece in the area",
-      "Nutrient-rich volcanic soil",
-      "Private road infrastructure",
-      "Natural boundaries for privacy"
+      "Can support 20 small houses",
+      "Host around 40 people comfortably",
+      "One of the last intact parcels in the area",
+      "Rich soil, easy to build on",
+      "Access to electricity"
     ]
   }
 ];
@@ -268,11 +268,14 @@ export default function LandSection() {
       
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Header section */}
-        <div ref={textRef} className="max-w-3xl mx-auto text-center mb-20">
-          <span className="inline-block text-earth-600 uppercase tracking-[0.25em] text-sm font-medium mb-6 animate-gsap">The Land</span>
-          <h2 className="section-heading mb-12 animate-gsap">Where Nature Inspires Our Vision</h2>
-          <p className="text-xl text-earth-700 leading-relaxed mb-8 animate-gsap">
-            Nestled in the heart of the Costa Rican mountains, our 50-hectare sanctuary combines pristine forests, flowing streams, and fertile valleys—creating the perfect canvas for regenerative design and conscious community.
+        <div ref={textRef} className="max-w-3xl mx-auto text-center mb-16">
+          <span className="text-earth-600 uppercase tracking-[0.25em] text-sm font-medium mb-4 inline-block animate-gsap">The Sacred Land</span>
+          <h2 className="section-heading animate-gsap">The Land Calling Us Home</h2>
+          <p className="text-lg md:text-xl text-earth-800 max-w-3xl mx-auto leading-relaxed mb-6 animate-gsap">
+            The project is being birthed in Mexico, a country that upholds a very powerful energy of social resistance, indigenous rights, and integrity, and that holds weight on the global political scene for defending minorities.
+          </p>
+          <p className="text-lg md:text-xl text-earth-800 max-w-3xl mx-auto leading-relaxed animate-gsap">
+            This land is surrounded by agricultural fields with old trees and rich soil. It's an area rich in culture and history, with the presence of ocean, lagoon, and mangroves — a place that already hosts various collective initiatives, healing centers, and land regeneration projects.
           </p>
         </div>
         

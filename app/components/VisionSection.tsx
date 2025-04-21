@@ -13,8 +13,8 @@ if (typeof window !== 'undefined') {
 
 const visionPillars = [
   {
-    title: "Sacred Community Growth",
-    description: "Stepping beyond capitalization into a balanced exchange where equitable access and mutual support are valued over economic profit.",
+    title: "Community-Driven Growth",
+    description: "Stepping out of the over-capitalization of the wellness industry by prioritizing community-driven growth, equitable access, and mutual support over profit.",
     symbol: (
       <svg width="80" height="80" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-drawn">
         <circle cx="32" cy="32" r="20" stroke="currentColor" strokeWidth="1" strokeDasharray="1 2" />
@@ -34,7 +34,7 @@ const visionPillars = [
   },
   {
     title: "Human-Centered Healing",
-    description: "Cultivating a third way focused on the human factor — how to heal and support each other while living in reciprocity with the Earth's rhythms.",
+    description: "A third way focused on the human factor — on how to heal and support each other as we live in reciprocity with the Earth, grounded in dignity and remembrance of the sacred.",
     symbol: (
       <svg width="80" height="80" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-drawn">
         <circle cx="32" cy="32" r="20" stroke="currentColor" strokeWidth="1" strokeDasharray="1 2" />
@@ -55,7 +55,7 @@ const visionPillars = [
   },
   {
     title: "Indigenous Wisdom",
-    description: "Engaging with indigenous knowledge systems in sustainable ways, honoring ancestral wisdom while reclaiming a grounded approach to the sacred.",
+    description: "Sustainable ways to engage in a decolonized dialogue with indigenous communities and repressed minorities, reclaiming a grounded approach to the sacred.",
     symbol: (
       <svg width="80" height="80" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-drawn">
         <path d="M32 12C20.9543 12 12 20.9543 12 32C12 43.0457 20.9543 52 32 52" stroke="currentColor" strokeWidth="1" strokeDasharray="1 2" />
@@ -79,7 +79,7 @@ const visionPillars = [
   },
   {
     title: "Sovereignty & Autonomy",
-    description: "Enhancing self-sufficiency beyond external power structures, creating a sovereign community aligned with natural law.",
+    description: "Redefining togetherness and enhancing self-sufficiency and sovereignty without reliance on external power structures or obedience to overarching governmental systems.",
     symbol: (
       <svg width="80" height="80" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-drawn">
         <path d="M32 8L52 18V32C52 43.0457 43.0457 52 32 52C20.9543 52 12 43.0457 12 32V18L32 8Z" stroke="currentColor" strokeWidth="1" strokeDasharray="1 2" />
@@ -227,11 +227,9 @@ export default function VisionSection() {
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <span className="inline-block text-earth-600 uppercase tracking-[0.25em] text-sm font-medium mb-4">Our Vision</span>
-          <h2 ref={titleRef} className="section-heading">A Holistic Vision for Regenerative Living</h2>
+          <h2 ref={titleRef} className="section-heading">A Regenerative Vision for Sovereign Living</h2>
           <p ref={introRef} className="text-lg md:text-xl text-earth-800 max-w-3xl mx-auto leading-relaxed">
-            Through integrating indigenous wisdom, holistic wellness, community economics, and ecological 
-            restoration, we are creating a place where humanity can remember and re-establish its sacred 
-            connection to the land and each other.
+            Creation of an intentional regenerative community dedicated to protecting human integrity and sovereign birthrights: freedom, bodily autonomy, spiritual self-determination, and the right to live in harmony with nature.
           </p>
         </div>
         
@@ -250,12 +248,9 @@ export default function VisionSection() {
             </svg>
           </div>
           
-          <blockquote className="p-0 border-0 bg-transparent">
-            <p className="text-xl md:text-2xl text-earth-800 font-light font-serif leading-relaxed">
-              "This is a regenerative, heart-led social project connecting a network of individuals and communities 
-              who are invested in creating a more resilient, sustainable, and integrated way of living."
-            </p>
-          </blockquote>
+          <p className="font-serif text-xl md:text-2xl text-earth-900 max-w-2xl mx-auto">
+            A regenerative, heart-led social project dedicated to future generations and the defense of human integrity. A community made to radiate outward and plant seeds of change, rather than being an isolated bubble.
+          </p>
         </div>
         
         {/* Vision pillars with enhanced card styling for mobile */}

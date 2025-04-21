@@ -22,24 +22,24 @@ const indigenousWisdom = [
 // Indigenous collaboration principles
 const collaborationPrinciples = [
   {
-    id: "respect",
-    title: "Respect",
-    description: "Honoring indigenous sovereignty, traditions and protocols in all interactions."
+    id: "employment",
+    title: "Employment",
+    description: "Offering meaningful employment opportunities to local indigenous community members."
   },
   {
-    id: "reciprocity",
-    title: "Reciprocity",
-    description: "Ensuring mutual benefit and exchange, not extraction of wisdom or resources."
+    id: "workshops",
+    title: "Free Workshops",
+    description: "Providing free access to workshops and educational programs for indigenous participants."
   },
   {
-    id: "integration",
-    title: "Integration",
-    description: "Weaving indigenous ways of knowing into the fabric of all community activities."
+    id: "education",
+    title: "Educational Offerings",
+    description: "Creating educational offerings for children and adults including permaculture, health, and trade skills."
   },
   {
-    id: "acknowledgment",
-    title: "Acknowledgment",
-    description: "Recognizing the traditional stewards of the land and their ongoing relationship with it."
+    id: "fundraising",
+    title: "Community Fundraisers",
+    description: "Hosting community fundraiser events that benefit local indigenous initiatives."
   }
 ];
 
@@ -185,9 +185,8 @@ export default function IndigenousStewardshipSection() {
           <span className="inline-block text-earth-600 uppercase tracking-[0.25em] text-sm font-medium mb-6">Ancient Wisdom, Modern Times</span>
           <h2 className="section-heading mb-8">Indigenous Integration</h2>
           <p className="text-xl text-earth-800 max-w-3xl mx-auto leading-relaxed font-light">
-            Our approach centers indigenous wisdom and ceremony, recognizing the deep knowledge of the land's 
-            original stewards. We seek to learn from and collaborate with local indigenous communities with 
-            humility and respect.
+            We are committed to respectful and reciprocal relationships with local communities. Our integration 
+            approach focuses on mutual benefit and genuine cross-cultural exchange.
           </p>
         </motion.div>
 
@@ -259,27 +258,26 @@ export default function IndigenousStewardshipSection() {
           
           {/* Right column - Our Approach */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            transition={{ duration: 0.7 }}
             className="bg-white/70 backdrop-blur-sm p-6 md:p-8 rounded-lg shadow-sm border border-earth-100"
           >
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 mr-4 text-earth-600">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8 3H6C4.89543 3 4 3.89543 4 5V19C4 20.1046 4.89543 21 6 21H18C19.1046 21 20 20.1046 20 19V5C20 3.89543 19.1046 3 18 3H16" stroke="currentColor" strokeWidth="1.5"/>
-                  <path d="M15 8C15 9.65685 13.6569 11 12 11C10.3431 11 9 9.65685 9 8C9 6.34315 10.3431 5 12 5C13.6569 5 15 6.34315 15 8Z" stroke="currentColor" strokeWidth="1.5"/>
-                  <path d="M12 13V17" stroke="currentColor" strokeWidth="1.5"/>
+                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="1.5"/>
+                  <path d="M7.5 12L10.5 15L16.5 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
               <h3 className="text-2xl font-serif font-medium text-earth-900">Our Approach</h3>
             </div>
             
             <p className="text-earth-800 mb-6 leading-relaxed">
-              We engage with indigenous communities through formal partnerships, seeking guidance from 
-              elders and knowledge keepers. Our project creates pathways for indigenous teachers to share 
-              their wisdom on their own terms, with proper compensation and acknowledgment.
+              We are stepping out of various forms of cultural appropriation and looking for sustainable ways to engage 
+              in a decolonized dialogue with indigenous communities and repressed minorities, reclaiming a grounded approach 
+              to the sacred.
             </p>
             
             <p className="text-earth-800 leading-relaxed">

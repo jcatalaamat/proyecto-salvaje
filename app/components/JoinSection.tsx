@@ -11,7 +11,8 @@ const timelinePhases = [
       "Creation of the project's web platform",
       'Formation of the NGO and DAO structures',
       'May 1: $50K payment to secure the land',
-      'September 1: $200K payment for legal title'
+      'September 1: $200K payment for full legal title',
+      'Legal structure to manage land and DAO integration'
     ],
     active: true
   },
@@ -21,9 +22,7 @@ const timelinePhases = [
     period: 'February to May',
     items: [
       'First buildings begin — starting with three private houses',
-      'Continued development of foundational infrastructure',
-      'Implementation of basic permaculture systems',
-      'First community gatherings and ceremonies'
+      'Continued development of foundational infrastructure'
     ]
   },
   {
@@ -31,10 +30,7 @@ const timelinePhases = [
     title: 'Year 2',
     period: '',
     items: [
-      'Construction of the larger community infrastructure begins',
-      'Development of the educational center',
-      'Implementation of renewable energy systems',
-      'Beginning of regular community programs'
+      'Construction of the larger community infrastructure begins'
     ]
   },
   {
@@ -42,10 +38,7 @@ const timelinePhases = [
     title: 'Year 3',
     period: '',
     items: [
-      'Launch of immersive workshops and full educational programming',
-      'Opening to broader community participation',
-      'Expansion of regenerative agriculture projects',
-      'Integration with regional networks and initiatives'
+      'Launch of immersive workshops and full educational programming'
     ]
   }
 ];
@@ -112,11 +105,10 @@ export default function JoinSection() {
           className="text-center mb-16"
         >
           <span className="inline-block text-earth-600 uppercase tracking-[0.25em] text-sm font-medium mb-6">The Sacred Invitation</span>
-          <h2 className="section-heading mb-8">Do You Feel The Call?</h2>
+          <h2 className="section-heading mb-8">Join Our Community</h2>
           <p className="text-xl text-earth-800 max-w-3xl mx-auto leading-relaxed font-light italic">
-            If your heart stirs as you read this, you're invited to walk with us —
-            to be part of this sacred journey as we create a regenerative refuge
-            dedicated to protecting human integrity and living in harmony with the Earth's rhythms.
+            We are looking to offer shelter for those dedicated to supporting the collective and fighting for truth & dignity. 
+            If you feel called to be part of this project, there are several ways to contribute.
           </p>
         </motion.div>
 
@@ -129,7 +121,7 @@ export default function JoinSection() {
           className="mb-20"
         >
           <h3 className="text-2xl font-semibold text-earth-900 mb-8 text-center font-serif">
-            Our Unfolding Path
+            Timeline & Phases
           </h3>
           
           {/* Timeline navigation */}
@@ -210,13 +202,17 @@ export default function JoinSection() {
             transition={{ duration: 0.7 }}
           >
             <h3 className="text-2xl font-semibold text-earth-900 mb-6 font-serif">
-              Step Into the Circle
+              Structure & Contributions
             </h3>
             
             <p className="text-earth-800 mb-6 font-light">
-              Whether you're interested in becoming a land steward, community contributor, 
-              aligned investor, or simply learning more about our vision, we welcome your voice. 
-              Tell us why you feel called to this project — we read every message with care.
+              The legal structure will consist of a Mexican non-profit organization and a DAO (Decentralized Autonomous Organization), 
+              using blockchain technology to provide full transparency around decision-making and resource flow.
+            </p>
+            
+            <p className="text-earth-800 mb-6 font-light">
+              We are calling for three founding families as land stewards ($180K each), 10 contributors 
+              ($50K-$75K), and aligned impact investors to support key infrastructure development.
             </p>
             
             {/* Enhanced form with softer styling and note */}

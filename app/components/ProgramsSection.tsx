@@ -15,8 +15,8 @@ if (typeof window !== 'undefined') {
 const selfSufficiencyPrograms = [
   {
     id: 'permaculture',
-    title: 'Permaculture Design',
-    description: 'Learn to create sustainable and regenerative systems that mimic natural patterns while producing abundance. Includes hands-on design projects and field experience.',
+    title: 'Natural Building & Permaculture',
+    description: 'Learn sustainable building techniques, permaculture design principles, and renewable energy systems for self-sufficient living in harmony with nature.',
     duration: '4 weeks',
     format: 'Immersive',
     icon: (
@@ -29,27 +29,9 @@ const selfSufficiencyPrograms = [
     )
   },
   {
-    id: 'natural-building',
-    title: 'Natural Building',
-    description: 'Master the arts of building with earth, bamboo, and other natural materials. Design and construct sustainable shelters that work with the land rather than against it.',
-    duration: '3 weeks',
-    format: 'Hands-on',
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-        <path d="M3 21h18" />
-        <path d="M5 21V7l8-4v18" />
-        <path d="M19 21V11l-6-4" />
-        <path d="M9 9v.01" />
-        <path d="M9 12v.01" />
-        <path d="M9 15v.01" />
-        <path d="M9 18v.01" />
-      </svg>
-    )
-  },
-  {
     id: 'nutrition',
-    title: 'Holistic Nutrition',
-    description: 'Explore the healing power of whole foods, medicinal herbs, and mindful eating practices. Learn to grow, prepare, and preserve nutrient-dense foods for optimal health.',
+    title: 'Nutrition & Health',
+    description: 'Explore holistic approaches to nutrition, health, somatics, and nervous system regulation for individual and collective wellbeing.',
     duration: '2 weeks',
     format: 'Interactive',
     icon: (
@@ -63,8 +45,8 @@ const selfSufficiencyPrograms = [
   },
   {
     id: 'emotional',
-    title: 'Emotional Literacy',
-    description: 'Develop tools for processing emotions and creating healthy relationship patterns. Learn communication skills that foster deep connection and authentic expression.',
+    title: 'Emotional Intelligence',
+    description: 'Develop emotional intelligence, family dynamics awareness, and self-care practices for healthier relationships and personal growth.',
     duration: '2 weeks',
     format: 'Experiential',
     icon: (
@@ -76,14 +58,28 @@ const selfSufficiencyPrograms = [
       </svg>
     )
   },
+  {
+    id: 'communication',
+    title: 'Communication & Relating',
+    description: 'Master effective communication skills, conflict resolution, and authentic relating practices for building stronger connections and community.',
+    duration: '2 weeks',
+    format: 'Interactive',
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+        <path d="M8 21h12a2 2 0 002-2v-2H10v2a2 2 0 01-2 2zm14-10v2a2 2 0 01-2 2H8a2 2 0 01-2-2v-2h16z" />
+        <path d="M4 15V5a2 2 0 012-2h12a2 2 0 012 2v10" />
+        <path d="M6 15v-2a2 2 0 012-2h8a2 2 0 012 2v2" />
+      </svg>
+    )
+  },
 ];
 
 // Transformational Practices programs
 const transformationalPrograms = [
   {
-    id: 'medicine',
-    title: 'Sacred Plant Medicine',
-    description: 'Explore the ancestral traditions of plant medicine, learning to identify, grow, harvest, and prepare remedies from native medicinal plants under indigenous guidance.',
+    id: 'sacred',
+    title: 'Sacred Connection',
+    description: 'Explore relationships with the sacred, animism, and integration practices that honor our connection to all living beings and the Earth.',
     duration: '2 weeks',
     format: 'Ceremonial',
     icon: (
@@ -94,25 +90,29 @@ const transformationalPrograms = [
     )
   },
   {
-    id: 'leadership',
-    title: 'Regenerative Leadership',
-    description: 'Develop the skills, mindset, and practices needed to lead organizations and communities toward truly regenerative futures. Combines inner work with systems thinking.',
+    id: 'elemental',
+    title: 'Elemental & Ceremonial Work',
+    description: 'Connect with elemental forces and participate in ceremonial practices that foster deep transformation and spiritual growth.',
     duration: '3 weeks',
-    format: 'Hybrid',
+    format: 'Sacred',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M18 12a6 6 0 01-12 0" />
-        <path d="M8 9l4 3 4-3" />
+        <path d="M3 21h18" />
+        <path d="M5 21V7l8-4v18" />
+        <path d="M19 21V11l-6-4" />
+        <path d="M9 9v.01" />
+        <path d="M9 12v.01" />
+        <path d="M9 15v.01" />
+        <path d="M9 18v.01" />
       </svg>
     )
   },
   {
-    id: 'ritual',
-    title: 'Ceremonial Rites of Passage',
-    description: 'Experience transformative rituals and rites designed to mark significant life transitions and connect participants with ancestral wisdom and planetary consciousness.',
+    id: 'vision',
+    title: 'Youth Vision Quests',
+    description: 'Support youth in meaningful rites of passage and vision quests that connect them to their purpose and place in the community.',
     duration: '1 week',
-    format: 'Sacred',
+    format: 'Immersive',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <circle cx="12" cy="8" r="5" />
@@ -126,11 +126,11 @@ const transformationalPrograms = [
     )
   },
   {
-    id: 'storytelling',
-    title: 'Ancestral Storytelling',
-    description: 'Rediscover the power of oral tradition through indigenous storytelling practices. Learn to craft and share narratives that preserve wisdom and build community cohesion.',
+    id: 'family',
+    title: 'Whole Family Gatherings',
+    description: 'Participate in cross-pollination gatherings and vision-to-action incubators that bring together families and communities for collective growth.',
     duration: '2 weeks',
-    format: 'Immersive',
+    format: 'Community',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <path d="M8 21h12a2 2 0 002-2v-2H10v2a2 2 0 01-2 2zm14-10v2a2 2 0 01-2 2H8a2 2 0 01-2-2v-2h16z" />
@@ -243,9 +243,9 @@ export default function ProgramsSection() {
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div ref={titleRef} className="mb-16 max-w-3xl mx-auto text-center">
           <span className="inline-block text-forest-600 uppercase tracking-[0.25em] text-sm font-medium mb-6">Sacred Learning</span>
-          <h2 className="section-heading mb-8">Immersive Learning Paths</h2>
+          <h2 className="section-heading mb-8">Immersive Educational Programs</h2>
           <p className="text-xl text-earth-800 leading-relaxed font-light">
-            Teaching individuals how to be self-sufficient, emotionally literate, and deeply connected to the sacred rhythms of life. Each experience integrates ancestral wisdom with modern understanding.
+            Teaching individuals how to be self-sufficient, self-aware, in right relationship, and to develop critical thinking, emotional skills, and social consciousness — to be in service of the collective.
           </p>
         </div>
         
