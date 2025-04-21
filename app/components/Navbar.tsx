@@ -5,7 +5,7 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState('');
 
   const navLinks = [
-    { name: 'Home', href: '#' },
+    { name: 'Home', href: '/' },
     { name: 'Vision', href: '#about' },
     { name: 'The Land', href: '#land' },
     { name: 'Programs', href: '#programs' },
@@ -44,7 +44,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
-            <a href="#" className="text-2xl font-serif font-bold text-earth-900">
+            <a href="/" className="text-2xl font-serif font-bold text-earth-900">
               Proyecto Salvaje
             </a>
           </div>

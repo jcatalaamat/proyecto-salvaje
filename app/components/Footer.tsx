@@ -126,9 +126,9 @@ export default function Footer() {
               </p>
             </div>
             <div className="flex items-center">
-              <a href="" className="focus:outline-none">
+              <a href="/" className="focus:outline-none">
                 <img
-                  src="/public/favicon.svg"
+                  src="/favicon.svg"
                   alt="Proyecto Salvaje Logo"
                   className="h-10 w-auto"
                 />
