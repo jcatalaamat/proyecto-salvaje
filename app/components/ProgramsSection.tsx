@@ -309,16 +309,16 @@ export default function ProgramsSection() {
             viewport={{ once: false, amount: 0.1 }} // Very low threshold to make it visible sooner
             transition={{ duration: 0.6 }}
           >
-            Curriculum of Self-Sufficiency <span className="text-earth-600">&</span> Emotional Literacy
+            Curriculum of Self-Sufficiency <span className="text-forest-600">&</span> Natural Living
           </motion.h3>
           
           <div ref={selfSufficiencyRef} className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {selfSufficiencyPrograms.map((program) => (
               <div 
                 key={program.id}
-                className="program-card relative overflow-hidden"
+                className="program-card relative overflow-visible h-full p-1 mb-2"
               >
-                <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden border border-forest-100 group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1">
+                <div className="relative bg-white rounded-2xl overflow-hidden border border-forest-100 group transition-all duration-500 transform hover:-translate-y-1 h-full" style={{ boxShadow: '0 4px 20px -2px rgba(0, 32, 19, 0.12)' }}>
                   {/* Card background pattern */}
                   <div className="absolute inset-0 bg-texture-paper opacity-30"></div>
                   
@@ -332,9 +332,9 @@ export default function ProgramsSection() {
                       </div>
                       
                       <div>
-                        <h3 className="text-xl md:text-2xl font-serif text-forest-900 mb-2 text-center md:text-left">{program.title}</h3>
+                        <h3 className="text-xl md:text-2xl font-serif text-earth-900 mb-2 text-center md:text-left">{program.title}</h3>
                         <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 md:gap-4 text-xs md:text-sm">
-                          <span className="inline-flex items-center px-3 py-1 rounded-full bg-forest-50 text-forest-800 border border-forest-100">
+                          <span className="inline-flex items-center px-3 py-1 rounded-full bg-forest-50 text-earth-800 border border-forest-100">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                             </svg>
@@ -370,8 +370,8 @@ export default function ProgramsSection() {
                   </div>
                   
                   {/* Decorative corner element */}
-                  <div className="absolute top-0 right-0 w-24 h-24 overflow-hidden text-forest-100">
-                    <div className="absolute -top-12 -right-12 w-24 h-24 transform rotate-45 bg-forest-50 border-b border-forest-100"></div>
+                  <div className="absolute top-0 right-0 w-20 h-20 overflow-hidden text-forest-100">
+                    <div className="absolute -top-10 -right-10 w-20 h-20 transform rotate-45 bg-forest-50/70 border-b border-forest-100/50"></div>
                   </div>
                 </div>
               </div>
@@ -393,16 +393,16 @@ export default function ProgramsSection() {
             viewport={{ once: false, amount: 0.1 }} // Very low threshold to make it visible sooner
             transition={{ duration: 0.6 }}
           >
-            Transformational Practices
+            Transformational <span className="text-gold-500">Practices</span>
           </motion.h3>
           
           <div ref={transformationalRef} className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {transformationalPrograms.map((program) => (
               <div 
                 key={program.id}
-                className="program-card relative overflow-hidden"
+                className="program-card relative overflow-visible h-full p-1 mb-2"
               >
-                <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden border border-gold-200 group hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-1">
+                <div className="relative bg-white rounded-2xl overflow-hidden border border-gold-200 group transition-all duration-500 transform hover:-translate-y-1 h-full" style={{ boxShadow: '0 4px 20px -2px rgba(76, 29, 0, 0.1)' }}>
                   {/* Card background pattern */}
                   <div className="absolute inset-0 bg-texture-paper opacity-30"></div>
                   
@@ -454,8 +454,8 @@ export default function ProgramsSection() {
                   </div>
                   
                   {/* Decorative corner element */}
-                  <div className="absolute top-0 right-0 w-24 h-24 overflow-hidden text-gold-200">
-                    <div className="absolute -top-12 -right-12 w-24 h-24 transform rotate-45 bg-gold-50 border-b border-gold-200"></div>
+                  <div className="absolute top-0 right-0 w-20 h-20 overflow-hidden text-gold-100">
+                    <div className="absolute -top-10 -right-10 w-20 h-20 transform rotate-45 bg-gold-50/70 border-b border-gold-100/50"></div>
                   </div>
                 </div>
               </div>

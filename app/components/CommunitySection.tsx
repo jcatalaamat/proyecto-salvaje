@@ -78,9 +78,9 @@ const governanceStructures = [
   {
     title: "Council Gatherings",
     description: "Regular community-wide meetings where we share information, make collective decisions, and deepen our connections.",
-    color: "bg-gold-50",
-    borderColor: "border-gold-200",
-    textColor: "text-earth-900"
+    color: "bg-amber-50",
+    borderColor: "border-amber-200",
+    textColor: "text-amber-900"
   }
 ];
 
@@ -438,7 +438,7 @@ export default function CommunitySection() {
                 <div className={`rounded-xl shadow-md overflow-hidden ${structure.color} border ${structure.borderColor}`}>
                   <div className={`p-6 ${structure.textColor}`}>
                     <h4 className="text-lg md:text-xl font-serif mb-3">{structure.title}</h4>
-                    <p className="text-earth-700 text-sm">{structure.description}</p>
+                    <p className={`${structure.textColor} opacity-80 text-sm`}>{structure.description}</p>
                   </div>
                 </div>
               </div>
