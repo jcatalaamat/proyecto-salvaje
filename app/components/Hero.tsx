@@ -69,8 +69,23 @@ export default function Hero() {
     const text = titleRef.current.innerText;
     let splitHTML = '';
     
-    text.split('').forEach(char => {
-      splitHTML += `<span class="char inline-block transform">${char === ' ' ? '&nbsp;' : char}</span>`;
+    // Improved text splitting with better handling for line breaks
+    const lines = text.split('\n');
+    lines.forEach((line, lineIndex) => {
+      // Add a line container with proper spacing
+      splitHTML += '<div class="line-container" style="overflow: visible; line-height: 1.3;">';
+      
+      // Process each character in the line
+      line.split('').forEach(char => {
+        splitHTML += `<span class="char inline-block transform" style="margin-bottom: 0.1em;">${char === ' ' ? '&nbsp;' : char}</span>`;
+      });
+      
+      splitHTML += '</div>';
+      
+      // Add a line break if not the last line
+      if (lineIndex < lines.length - 1) {
+        splitHTML += '<br/>';
+      }
     });
     
     titleRef.current.innerHTML = splitHTML;
@@ -80,7 +95,7 @@ export default function Hero() {
     <section ref={heroRef} className="relative min-h-screen overflow-hidden">
       {/* Enhanced cinematic background with parallax & texture effect */}
       <div className="absolute inset-0 z-0">
-        {/* Cinematic video background with overlay */}
+        {/* Cinematic video background with overlay - improved for mobile */}
         <div className="absolute inset-0 overflow-hidden">
           <video 
             className="absolute w-full h-full object-cover object-center"
@@ -92,18 +107,20 @@ export default function Hero() {
           >
             <source src="/videos/gentle-nature.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-b from-earth-50/90 via-transparent to-earth-100/70"></div>
-          <div className="absolute inset-0 bg-[url('/images/texture-bg.jpg')] bg-cover bg-center bg-no-repeat mix-blend-overlay opacity-50"></div>
-          <div className="absolute inset-0 backdrop-blur-[2px]"></div>
+          {/* Enhanced overlay for better legibility and ambiance on mobile */}
+          <div className="absolute inset-0 bg-gradient-to-b from-earth-50/95 via-earth-100/70 to-earth-100/60 md:from-earth-50/90 md:via-transparent md:to-earth-100/70"></div>
+          <div className="absolute inset-0 bg-[url('/images/texture-bg.jpg')] bg-cover bg-center bg-no-repeat mix-blend-overlay opacity-40"></div>
+          <div className="absolute inset-0 backdrop-blur-[3px] md:backdrop-blur-[2px]"></div>
         </div>
       </div>
       
       {/* Enhanced sacred geometry background elements with more organic shapes */}
       <div className="absolute inset-0 overflow-hidden">
-        <div ref={el => addToCircles(el)} className="sacred-circle w-[60vw] h-[60vw] left-[-25vw] top-[-20vw] opacity-70 mix-blend-soft-light"></div>
-        <div ref={el => addToCircles(el)} className="sacred-circle w-[45vw] h-[45vw] right-[-15vw] top-[10vh] opacity-60 mix-blend-soft-light"></div>
-        <div ref={el => addToCircles(el)} className="sacred-circle w-[50vw] h-[50vw] left-[5vw] bottom-[-25vh] opacity-70 mix-blend-soft-light"></div>
-        <div ref={el => addToCircles(el)} className="sacred-circle w-[30vw] h-[30vw] right-[10vw] bottom-[-5vh] opacity-60 mix-blend-soft-light"></div>
+        {/* Optimized for visibility on mobile */}
+        <div ref={el => addToCircles(el)} className="sacred-circle w-[80vw] md:w-[60vw] h-[80vw] md:h-[60vw] left-[-35vw] top-[-30vw] opacity-70 mix-blend-soft-light"></div>
+        <div ref={el => addToCircles(el)} className="sacred-circle w-[70vw] md:w-[45vw] h-[70vw] md:h-[45vw] right-[-30vw] top-[5vh] opacity-60 mix-blend-soft-light"></div>
+        <div ref={el => addToCircles(el)} className="sacred-circle w-[60vw] md:w-[50vw] h-[60vw] md:h-[50vw] left-[0vw] bottom-[-20vh] opacity-70 mix-blend-soft-light"></div>
+        <div ref={el => addToCircles(el)} className="sacred-circle w-[40vw] md:w-[30vw] h-[40vw] md:h-[30vw] right-[5vw] bottom-[-10vh] opacity-60 mix-blend-soft-light"></div>
       </div>
       
       {/* Additional organic decorative elements */}
@@ -131,7 +148,7 @@ export default function Hero() {
         <div className="absolute top-20 right-1/3 w-[120px] h-[40vh] bg-gradient-to-b from-earth-100/60 to-transparent transform rotate-12 blur-lg"></div>
       </div>
       
-      <div className="container mx-auto px-6 relative z-10 pt-32 pb-24 min-h-screen flex flex-col justify-center">
+      <div className="container mx-auto px-6 relative z-10 pt-28 md:pt-32 pb-24 min-h-screen flex flex-col justify-center">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -139,12 +156,13 @@ export default function Hero() {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="mb-6"
           >
-            <span className="text-earth-600 uppercase tracking-[0.3em] text-sm md:text-base font-medium">Regenerative Village School</span>
+            <span className="text-earth-600 uppercase tracking-[0.2em] md:tracking-[0.3em] text-sm md:text-base font-medium">Regenerative Village School</span>
           </motion.div>
           
           <h1 
             ref={titleRef}
-            className="font-serif text-5xl md:text-7xl text-earth-900 mb-6 leading-tight"
+            className="font-serif text-4xl md:text-7xl text-earth-900 mb-6 leading-normal md:leading-tight"
+            style={{ wordSpacing: '0.1em' }}
           >
             A regenerative village school for truth, healing, and sovereign living
           </h1>
@@ -153,7 +171,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="text-xl md:text-2xl text-earth-800 max-w-3xl mx-auto mb-6 font-serif italic"
+            className="text-lg md:text-2xl text-earth-800 max-w-3xl mx-auto mb-8 font-serif italic"
           >
             A healing village and real-life school for future generations — rooted in dignity, integrity, and remembrance of the sacred.
           </motion.p>
@@ -162,13 +180,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="flex flex-wrap justify-center gap-6 mt-10"
+            className="flex flex-wrap justify-center gap-5 mt-8 md:mt-10"
           >
-            <a href="#join" className="hero-button btn-sacred-invite group relative overflow-hidden">
+            <a href="#join" className="hero-button btn-sacred-invite group relative overflow-hidden w-full md:w-auto">
               <span className="relative z-10">Join Our Community</span>
               <span className="absolute inset-0 bg-earth-500 opacity-0 group-hover:opacity-10 transition-opacity duration-700 rounded-full transform group-hover:scale-110"></span>
             </a>
-            <a href="#about" className="hero-button btn-secondary group">
+            <a href="#about" className="hero-button btn-secondary group w-full md:w-auto">
               <span>Explore Our Vision</span>
               <svg className="inline-block ml-2 w-4 h-4 transition-transform duration-500 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15 5L21 12M21 12L15 19M21 12H3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

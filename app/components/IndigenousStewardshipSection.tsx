@@ -191,11 +191,19 @@ export default function IndigenousStewardshipSection() {
           </p>
         </motion.div>
 
-        {/* Wisdom Quotes Carousel */}
+        {/* Wisdom Quotes Carousel with enhanced mobile styling */}
         <div className="mb-20 relative" ref={quoteRef}>
-          <div className="max-w-4xl mx-auto px-8 py-12 bg-earth-50/80 backdrop-blur-sm rounded-lg border border-earth-100 shadow-inner">
+          <div className="max-w-4xl mx-auto px-6 md:px-8 py-10 md:py-12 bg-earth-50/80 backdrop-blur-sm rounded-lg border border-earth-100 shadow-inner">
             {indigenousWisdom.map((item, index) => (
-              <div key={index} className="wisdom-quote text-center mb-6 last:mb-0">
+              <div key={index} className="wisdom-quote text-center mb-8 last:mb-0">
+                <div className="mb-4 opacity-70 mx-auto w-12 h-12">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.4,11c0.3-3.1,1.4-6.3,4.6-6.3c0.3,0,0.5-0.3,0.5-0.6c0-0.3-0.3-0.5-0.6-0.5c-3.4,0-6.4,2.7-6.4,7.8
+                     c0,3,1.5,4.9,3.8,4.9c1.8,0,3.2-1.5,3.2-3.6C9.4,10.8,7.5,9.8,4.4,11z M15.4,11c0.3-3.1,1.4-6.3,4.6-6.3
+                     c0.3,0,0.5-0.3,0.5-0.6c0-0.3-0.3-0.5-0.6-0.5c-3.4,0-6.4,2.7-6.4,7.8c0,3,1.5,4.9,3.8,4.9c1.8,0,3.2-1.5,3.2-3.6
+                     C20.4,10.8,18.5,9.8,15.4,11z" fill="var(--color-amber-gold)"/>
+                  </svg>
+                </div>
                 <p className="text-xl md:text-2xl italic text-earth-800 mb-4 font-serif leading-relaxed">"{item.quote}"</p>
                 <p className="text-earth-600 font-medium">{item.attribution}</p>
               </div>
@@ -217,25 +225,83 @@ export default function IndigenousStewardshipSection() {
           </div>
         </div>
 
-        {/* Core content grid */}
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
-          {/* Collaboration Principles */}
-          <div ref={principlesRef}>
-            <div className="mb-8">
-              <h3 className="text-2xl font-semibold text-earth-900 mb-4 font-serif">
-                Collaboration Principles
-              </h3>
-              <p className="text-earth-700 font-light">
-                Our relationships with indigenous communities are guided by these essential principles, 
-                ensuring respectful and mutually beneficial exchanges of knowledge and support.
-              </p>
+        {/* Text content with better structure and visual elements */}
+        <div className="grid md:grid-cols-2 gap-10 mb-20">
+          {/* Left column - Our Values */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="bg-white/70 backdrop-blur-sm p-6 md:p-8 rounded-lg shadow-sm border border-earth-100"
+          >
+            <div className="flex items-center mb-6">
+              <div className="w-12 h-12 mr-4 text-earth-600">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="1.5"/>
+                  <path d="M7.5 12L10.5 15L16.5 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
+              <h3 className="text-2xl font-serif font-medium text-earth-900">Our Values</h3>
             </div>
             
-            <div className="space-y-5">
-              {collaborationPrinciples.map((principle) => (
-                <div key={principle.id} className="principle-card bg-white/80 backdrop-blur-sm p-5 rounded-lg border border-earth-100 shadow-sm transition-all hover:shadow-md">
-                  <h4 className="text-lg font-medium text-earth-900 mb-2">{principle.title}</h4>
-                  <p className="text-earth-700 font-light">{principle.description}</p>
+            <p className="text-earth-800 mb-6 leading-relaxed">
+              We approach our relationship with indigenous wisdom with deep reverence and a commitment to ethical 
+              collaboration. This project stands firmly against cultural appropriation and extraction, 
+              seeking instead to honor indigenous sovereignty and build reciprocal relationships.
+            </p>
+            
+            <p className="text-earth-800 leading-relaxed">
+              Our core values include respect for traditional knowledge, recognition of indigenous land 
+              stewardship, and a commitment to fair exchange that benefits the communities we learn from.
+            </p>
+          </motion.div>
+          
+          {/* Right column - Our Approach */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="bg-white/70 backdrop-blur-sm p-6 md:p-8 rounded-lg shadow-sm border border-earth-100"
+          >
+            <div className="flex items-center mb-6">
+              <div className="w-12 h-12 mr-4 text-earth-600">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 3H6C4.89543 3 4 3.89543 4 5V19C4 20.1046 4.89543 21 6 21H18C19.1046 21 20 20.1046 20 19V5C20 3.89543 19.1046 3 18 3H16" stroke="currentColor" strokeWidth="1.5"/>
+                  <path d="M15 8C15 9.65685 13.6569 11 12 11C10.3431 11 9 9.65685 9 8C9 6.34315 10.3431 5 12 5C13.6569 5 15 6.34315 15 8Z" stroke="currentColor" strokeWidth="1.5"/>
+                  <path d="M12 13V17" stroke="currentColor" strokeWidth="1.5"/>
+                </svg>
+              </div>
+              <h3 className="text-2xl font-serif font-medium text-earth-900">Our Approach</h3>
+            </div>
+            
+            <p className="text-earth-800 mb-6 leading-relaxed">
+              We engage with indigenous communities through formal partnerships, seeking guidance from 
+              elders and knowledge keepers. Our project creates pathways for indigenous teachers to share 
+              their wisdom on their own terms, with proper compensation and acknowledgment.
+            </p>
+            
+            <p className="text-earth-800 leading-relaxed">
+              Through ceremony, sustainable practices, and deep listening, we aim to reintegrate the spiritual 
+              dimension of land stewardship that has been preserved by indigenous cultures worldwide.
+            </p>
+          </motion.div>
+        </div>
+
+        {/* Principles and Practices with mobile-optimized grid */}
+        <div className="grid md:grid-cols-2 gap-12">
+          {/* Collaboration Principles */}
+          <div ref={principlesRef} className="mb-10 md:mb-0">
+            <h3 className="text-2xl font-serif font-medium text-earth-900 mb-6 text-center">Guiding Principles</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {collaborationPrinciples.map((principle, index) => (
+                <div 
+                  key={principle.id}
+                  className="principle-card bg-earth-50/80 backdrop-blur-sm p-5 rounded-lg shadow-sm border-l-4 border-earth-400"
+                >
+                  <h4 className="text-lg font-medium text-earth-800 mb-2">{principle.title}</h4>
+                  <p className="text-earth-700 text-sm">{principle.description}</p>
                 </div>
               ))}
             </div>
@@ -243,81 +309,34 @@ export default function IndigenousStewardshipSection() {
           
           {/* Ceremonial Practices */}
           <div ref={practicesRef}>
-            <div className="mb-8">
-              <h3 className="text-2xl font-semibold text-earth-900 mb-4 font-serif">
-                Ceremony-Based Approach
-              </h3>
-              <p className="text-earth-700 font-light">
-                We integrate ceremony into all aspects of our community life, 
-                honoring the sacred connection between humans and the natural world.
-              </p>
-            </div>
-            
-            <div className="space-y-5">
-              {ceremonialPractices.map((practice) => (
-                <div key={practice.id} className="practice-card bg-white/80 backdrop-blur-sm p-5 rounded-lg border border-earth-100 shadow-sm transition-all hover:shadow-md">
-                  <h4 className="text-lg font-medium text-earth-900 mb-2">{practice.title}</h4>
-                  <p className="text-earth-700 font-light">{practice.description}</p>
+            <h3 className="text-2xl font-serif font-medium text-earth-900 mb-6 text-center">Ceremonial Practices</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {ceremonialPractices.map((practice, index) => (
+                <div 
+                  key={practice.id}
+                  className="practice-card bg-earth-50/80 backdrop-blur-sm p-5 rounded-lg shadow-sm border-l-4 border-amber-400"
+                >
+                  <h4 className="text-lg font-medium text-earth-800 mb-2">{practice.title}</h4>
+                  <p className="text-earth-700 text-sm">{practice.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </div>
         
-        {/* Image and commitment */}
-        <div className="grid md:grid-cols-5 gap-8 items-center">
-          <div className="md:col-span-3" ref={imageRef}>
-            <div className="relative rounded-xl overflow-hidden shadow-xl">
-              <div className="aspect-w-16 aspect-h-9">
-                <img 
-                  src="/images/indigenous-ceremony.jpg" 
-                  alt="Indigenous ceremony" 
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-earth-900/70 to-transparent flex items-end">
-                <div className="p-6 text-white">
-                  <p className="text-sm font-medium uppercase tracking-wider mb-1">Sacred Connection</p>
-                  <h4 className="text-xl font-serif">Honoring ancestral wisdom through ceremony</h4>
-                </div>
-              </div>
+        {/* Added image with natural elements */}
+        <div className="mt-16 text-center" ref={imageRef}>
+          <div className="inline-block relative">
+            <div className="w-full md:w-[80%] max-w-2xl mx-auto h-[300px] bg-[url('/images/indigenous-ceremony.jpg')] bg-cover bg-center rounded-lg shadow-lg overflow-hidden">
+              <div className="absolute inset-0 bg-earth-900/20"></div>
+            </div>
+            <div className="absolute -bottom-6 -right-6 w-24 h-24 text-earth-600 opacity-70">
+              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="0.8" />
+                <path d="M50 5 L50 95 M5 50 L95 50" stroke="currentColor" strokeWidth="0.8" fill="none" />
+              </svg>
             </div>
           </div>
-          
-          <motion.div 
-            className="md:col-span-2"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            <h3 className="text-2xl font-semibold text-earth-900 mb-4 font-serif">
-              Our Commitment
-            </h3>
-            <p className="text-earth-700 mb-6 font-light">
-              We acknowledge that true connection to the land requires a deep commitment 
-              to learning from those who have stewarded it for generations. We pledge to:
-            </p>
-            
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <span className="text-amber-gold font-bold mr-2">→</span>
-                <span className="text-earth-800">Consult with indigenous elders before land development</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-amber-gold font-bold mr-2">→</span>
-                <span className="text-earth-800">Create opportunities for indigenous-led workshops and teachings</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-amber-gold font-bold mr-2">→</span>
-                <span className="text-earth-800">Allocate resources to support indigenous-led land restoration</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-amber-gold font-bold mr-2">→</span>
-                <span className="text-earth-800">Center indigenous voices in community governance</span>
-              </li>
-            </ul>
-          </motion.div>
         </div>
       </div>
     </section>

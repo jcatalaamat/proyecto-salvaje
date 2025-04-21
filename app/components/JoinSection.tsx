@@ -219,7 +219,23 @@ export default function JoinSection() {
               Tell us why you feel called to this project — we read every message with care.
             </p>
             
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-lg shadow-md border border-earth-100">
+            {/* Enhanced form with softer styling and note */}
+            <div className="bg-white/80 backdrop-blur-sm p-6 md:p-8 rounded-lg shadow-md border border-earth-100 relative overflow-hidden">
+              {/* Subtle decorative element */}
+              <div className="absolute top-0 right-0 w-40 h-40 opacity-[0.03] pointer-events-none">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                  <path fill="var(--color-clay)" d="M44.3,-76.5C59.2,-70.4,74.3,-61.9,81.8,-48.1C89.3,-34.2,89.1,-15,85.3,2.2C81.5,19.4,74.1,34.8,64.8,49.5C55.5,64.1,44.3,78,30.2,84.2C16,90.4,-1.1,89,-16.9,84.4C-32.7,79.8,-47.3,72.1,-60.9,61.1C-74.5,50,-87.1,35.7,-87.8,20.4C-88.5,5.1,-77.3,-11.2,-69.2,-27.1C-61.1,-43,-56.1,-58.5,-45.4,-66.9C-34.6,-75.2,-18.3,-76.3,-1.5,-74C15.3,-71.6,29.4,-82.6,44.3,-76.5Z" transform="translate(100 100)" />
+                </svg>
+              </div>
+              
+              {/* Added note above form */}
+              <div className="flex items-center mb-6 text-earth-600 text-sm italic">
+                <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 16V12M12 8H12.01M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+                <span>We read every message with care and intention</span>
+              </div>
+              
               <form onSubmit={handleSubmit}>
                 <div className="mb-5">
                   <label htmlFor="name" className="block text-sm font-medium text-earth-700 mb-1">
@@ -232,7 +248,8 @@ export default function JoinSection() {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full p-3 border border-earth-200 rounded-md focus:ring-2 focus:ring-earth-500 focus:border-earth-500 bg-white/90"
+                    className="w-full p-3 border border-earth-200 rounded-lg focus:ring-2 focus:ring-earth-500 focus:border-earth-500 bg-white/90 shadow-sm transition-all duration-300 hover:border-earth-300"
+                    style={{ borderColor: 'var(--color-dusty-sage)' }}
                   />
                 </div>
                 
@@ -247,50 +264,55 @@ export default function JoinSection() {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full p-3 border border-earth-200 rounded-md focus:ring-2 focus:ring-earth-500 focus:border-earth-500 bg-white/90"
+                    className="w-full p-3 border border-earth-200 rounded-lg focus:ring-2 focus:ring-earth-500 focus:border-earth-500 bg-white/90 shadow-sm transition-all duration-300 hover:border-earth-300"
+                    style={{ borderColor: 'var(--color-dusty-sage)' }}
                   />
                 </div>
-
+                
                 <div className="mb-5">
                   <label htmlFor="interest" className="block text-sm font-medium text-earth-700 mb-1">
-                    Area of Interest
+                    Your Interest
                   </label>
                   <select
                     id="interest"
                     name="interest"
                     value={formData.interest}
                     onChange={handleInputChange}
-                    className="w-full p-3 border border-earth-200 rounded-md focus:ring-2 focus:ring-earth-500 focus:border-earth-500 bg-white/90"
+                    className="w-full p-3 border border-earth-200 rounded-lg focus:ring-2 focus:ring-earth-500 focus:border-earth-500 bg-white/90 shadow-sm transition-all duration-300 hover:border-earth-300"
+                    style={{ borderColor: 'var(--color-dusty-sage)' }}
                   >
-                    <option value="general">General Information</option>
-                    <option value="resident">Becoming a Resident</option>
-                    <option value="investor">Aligned Investment</option>
-                    <option value="contributor">Community Contributor</option>
-                    <option value="programs">Educational Programs</option>
+                    <option value="general">General Interest</option>
+                    <option value="community">Community Member</option>
+                    <option value="investor">Aligned Investor</option>
+                    <option value="partner">Strategic Partner</option>
+                    <option value="land-steward">Land Steward</option>
                   </select>
                 </div>
-
-                <div className="mb-5">
+                
+                <div className="mb-6">
                   <label htmlFor="message" className="block text-sm font-medium text-earth-700 mb-1">
                     Your Message
                   </label>
                   <textarea
                     id="message"
                     name="message"
+                    rows={5}
                     value={formData.message}
                     onChange={handleInputChange}
-                    rows={5}
-                    className="w-full p-3 border border-earth-200 rounded-md focus:ring-2 focus:ring-earth-500 focus:border-earth-500 bg-white/90"
-                    placeholder="Share why you feel called to connect with us..."
+                    required
+                    placeholder="Tell us what draws you to this project..."
+                    className="w-full p-3 border border-earth-200 rounded-lg focus:ring-2 focus:ring-earth-500 focus:border-earth-500 bg-white/90 shadow-sm transition-all duration-300 hover:border-earth-300"
+                    style={{ borderColor: 'var(--color-dusty-sage)' }}
                   ></textarea>
                 </div>
-
-                <button
-                  type="submit"
-                  className="w-full py-3 px-6 bg-clay text-white rounded-md hover:bg-clay-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-earth-500 font-medium"
+                
+                <button 
+                  type="submit" 
+                  className="w-full md:w-auto px-8 py-3 bg-earth-500 text-white rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-earth-500"
                   style={{ backgroundColor: 'var(--color-clay)' }}
                 >
-                  Step Into the Circle
+                  <span className="relative z-10">Send Message</span>
+                  <span className="absolute inset-0 bg-white opacity-0 rounded-full transition-opacity duration-300 hover:opacity-10"></span>
                 </button>
               </form>
             </div>
