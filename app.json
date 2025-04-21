@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "proyecto-salvaje",
+    "name": "Proyecto Salvaje",
     "slug": "proyecto-salvaje",
     "sdkVersion": "52.0.0",
     "newArchEnabled": true,
@@ -15,7 +15,15 @@
     "splash": {
       "image": "./public/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#000000"
+      "backgroundColor": "#FBF9F5"
+    },
+    "web": {
+      "name": "Proyecto Salvaje",
+      "short_name": "Proyecto Salvaje",
+      "description": "Regenerando la conexión entre la humanidad y la naturaleza",
+      "lang": "es-ES",
+      "themeColor": "#B09480",
+      "backgroundColor": "#FBF9F5"
     },
     "ios": {}
   }
