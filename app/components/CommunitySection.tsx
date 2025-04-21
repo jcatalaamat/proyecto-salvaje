@@ -526,7 +526,9 @@ export default function CommunitySection() {
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <a 
-            href="#join" 
+            href="mailto:info@proyectosalvaje.com" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block px-6 md:px-8 py-3 bg-earth-600 text-white rounded-full hover:bg-earth-700 transition-colors shadow-md hover:shadow-lg"
           >
             Join Our Community

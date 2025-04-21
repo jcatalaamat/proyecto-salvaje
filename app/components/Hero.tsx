@@ -162,7 +162,12 @@ export default function Hero() {
             transition={{ duration: 1, delay: 1, ease: [0.22, 1, 0.36, 1] }}
             className="flex flex-col md:flex-row items-center justify-center space-y-3 md:space-y-0 md:gap-5 mt-8 md:mt-10"
           >
-            <a href="#join" className="hero-button btn-sacred-invite group relative overflow-hidden w-full md:w-auto border border-earth-500 text-[#3b2f2f] font-semibold px-6 py-3 rounded-full bg-white/70 hover:bg-earth-50">
+            <a 
+              href="mailto:info@proyectosalvaje.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="hero-button btn-sacred-invite group relative overflow-hidden w-full md:w-auto border border-earth-500 text-[#3b2f2f] font-semibold px-6 py-3 rounded-full bg-white/70 hover:bg-earth-50"
+            >
               <span className="relative z-10">Join Our Community</span>
               <span className="absolute inset-0 bg-earth-500 opacity-0 group-hover:opacity-10 transition-opacity duration-700 rounded-full transform group-hover:scale-110"></span>
             </a>

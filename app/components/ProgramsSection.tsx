@@ -350,7 +350,9 @@ export default function ProgramsSection() {
                     
                     <div className="flex justify-center md:justify-start">
                       <a 
-                        href={`#${program.id}`} 
+                        href="mailto:info@proyectosalvaje.com" 
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="btn-outline-earth px-6 py-2 rounded-full inline-flex items-center hover:bg-forest-50 transition-all duration-300 group-hover:border-forest-400"
                       >
                         <span>Learn More</span>
@@ -432,7 +434,9 @@ export default function ProgramsSection() {
                     
                     <div className="flex justify-center md:justify-start">
                       <a 
-                        href={`#${program.id}`} 
+                        href="mailto:info@proyectosalvaje.com" 
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="btn-outline-earth px-6 py-2 rounded-full inline-flex items-center hover:bg-gold-50 transition-all duration-300 group-hover:border-gold-400"
                       >
                         <span>Learn More</span>
@@ -474,7 +478,9 @@ export default function ProgramsSection() {
                 Ready to walk this path of learning?
               </motion.h3>
               <a 
-                href="#calendar" 
+                href="mailto:info@proyectosalvaje.com" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-primary-gold px-6 md:px-8 py-2 md:py-3 rounded-full inline-flex items-center shadow-xl transition-all duration-300 transform hover:scale-105 text-sm md:text-base"
               >
                 <span>View Program Calendar</span>

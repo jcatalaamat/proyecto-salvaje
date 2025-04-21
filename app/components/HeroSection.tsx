@@ -187,7 +187,9 @@ export default function HeroSection() {
         
         <div className="flex flex-col sm:flex-row gap-6 mt-8">
           <a 
-            href="#join" 
+            href="mailto:info@proyectosalvaje.com" 
+            target="_blank"
+            rel="noopener noreferrer"
             className="cta-button px-8 py-4 bg-earth-600 hover:bg-earth-700 text-white rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 text-lg font-medium"
           >
             Join Our Community

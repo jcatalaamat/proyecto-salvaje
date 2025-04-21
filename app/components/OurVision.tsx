@@ -419,7 +419,7 @@ export default function OurVision() {
                 Explore Membership
               </a>
               <a 
-                href="#education" 
+                href="#programs" 
                 className="px-8 py-4 bg-white hover:bg-forest-50 text-forest-700 rounded-lg shadow-md hover:shadow-lg border border-forest-100 transition-all duration-300"
               >
                 View Educational Programs
