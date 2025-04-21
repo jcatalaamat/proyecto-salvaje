@@ -97,14 +97,14 @@ export default function Hero() {
       {/* Enhanced sacred geometry background elements with more organic shapes */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Optimized for visibility on mobile */}
-        <div ref={el => addToCircles(el)} className="sacred-circle w-[80vw] md:w-[60vw] h-[80vw] md:h-[60vw] left-[-35vw] top-[-30vw] opacity-70 mix-blend-soft-light"></div>
-        <div ref={el => addToCircles(el)} className="sacred-circle w-[70vw] md:w-[45vw] h-[70vw] md:h-[45vw] right-[-30vw] top-[5vh] opacity-60 mix-blend-soft-light"></div>
-        <div ref={el => addToCircles(el)} className="sacred-circle w-[60vw] md:w-[50vw] h-[60vw] md:h-[50vw] left-[0vw] bottom-[-20vh] opacity-70 mix-blend-soft-light"></div>
-        <div ref={el => addToCircles(el)} className="sacred-circle w-[40vw] md:w-[30vw] h-[40vw] md:h-[30vw] right-[5vw] bottom-[-10vh] opacity-60 mix-blend-soft-light"></div>
+        <div ref={el => addToCircles(el)} className="sacred-circle w-[80vw] md:w-[60vw] h-[80vw] md:h-[60vw] left-[-35vw] top-[-30vw] opacity-40 mix-blend-soft-light"></div>
+        <div ref={el => addToCircles(el)} className="sacred-circle w-[70vw] md:w-[45vw] h-[70vw] md:h-[45vw] right-[-30vw] top-[5vh] opacity-40 mix-blend-soft-light"></div>
+        <div ref={el => addToCircles(el)} className="sacred-circle w-[60vw] md:w-[50vw] h-[60vw] md:h-[50vw] left-[0vw] bottom-[-20vh] opacity-40 mix-blend-soft-light"></div>
+        <div ref={el => addToCircles(el)} className="sacred-circle w-[40vw] md:w-[30vw] h-[40vw] md:h-[30vw] right-[5vw] bottom-[-10vh] opacity-40 mix-blend-soft-light"></div>
       </div>
       
       {/* Additional organic decorative elements */}
-      <div className="decorative-element absolute left-[15%] top-[25%] w-32 h-32 opacity-30">
+      <div className="decorative-element absolute left-[15%] top-[25%] w-32 h-32 opacity-20">
         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M50 5C74.8528 5 95 25.1472 95 50C95 74.8528 74.8528 95 50 95C25.1472 95 5 74.8528 5 50C5 25.1472 25.1472 5 50 5Z" stroke="currentColor" strokeWidth="0.5"/>
           <path d="M50 20C66.5685 20 80 33.4315 80 50C80 66.5685 66.5685 80 50 80C33.4315 80 20 66.5685 20 50C20 33.4315 33.4315 20 50 20Z" stroke="currentColor" strokeWidth="0.5"/>
@@ -113,7 +113,7 @@ export default function Hero() {
         </svg>
       </div>
       
-      <div className="decorative-element absolute right-10 top-32 w-40 h-40 opacity-30 text-earth-700 animate-float">
+      <div className="decorative-element absolute right-10 top-32 w-40 h-40 opacity-20 text-earth-700 animate-float">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
           <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="0.8" />
           <circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" strokeWidth="0.6" />
@@ -141,17 +141,17 @@ export default function Hero() {
           
           <h1 
             ref={titleRef}
-            className="font-serif text-4xl md:text-7xl text-earth-900 mb-6 leading-relaxed md:leading-tight"
+            className="font-serif text-[22px] md:text-5xl text-[#3b2f2f] mb-6 leading-snug md:leading-tight tracking-tight"
             style={{ wordBreak: 'normal', overflowWrap: 'break-word', hyphens: 'manual' }}
           >
-            A regenerative village school for truth, healing, and sovereign living
+            A regenerative village school for truth, healing,<br className="hidden md:block" /> and sovereign living
           </h1>
           
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="text-lg md:text-2xl text-earth-800 max-w-3xl mx-auto mb-8 font-serif italic"
+            className="text-base md:text-lg text-[#5a4633] max-w-md mx-auto mb-8 font-serif italic font-light"
           >
             A healing village and real-life school for future generations — rooted in dignity, integrity, and remembrance of the sacred.
           </motion.p>
@@ -160,13 +160,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="flex flex-wrap justify-center gap-5 mt-8 md:mt-10"
+            className="flex flex-col md:flex-row items-center justify-center space-y-3 md:space-y-0 md:gap-5 mt-8 md:mt-10"
           >
-            <a href="#join" className="hero-button btn-sacred-invite group relative overflow-hidden w-full md:w-auto">
+            <a href="#join" className="hero-button btn-sacred-invite group relative overflow-hidden w-full md:w-auto border border-earth-500 text-[#3b2f2f] font-semibold px-6 py-3 rounded-full bg-white/70 hover:bg-earth-50">
               <span className="relative z-10">Join Our Community</span>
               <span className="absolute inset-0 bg-earth-500 opacity-0 group-hover:opacity-10 transition-opacity duration-700 rounded-full transform group-hover:scale-110"></span>
             </a>
-            <a href="#about" className="hero-button btn-secondary group w-full md:w-auto">
+            <a href="#about" className="hero-button btn-secondary group w-full md:w-auto border border-earth-500 text-[#3b2f2f] font-medium px-6 py-3 rounded-full bg-transparent hover:bg-earth-50/70">
               <span>Explore Our Vision</span>
               <svg className="inline-block ml-2 w-4 h-4 transition-transform duration-500 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15 5L21 12M21 12L15 19M21 12H3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
