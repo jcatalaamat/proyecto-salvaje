@@ -203,6 +203,7 @@ export default function JoinSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
+            id="contact-form"
           >
             <h3 className="text-2xl font-semibold text-earth-900 mb-6 font-serif">
               Structure & Contributions

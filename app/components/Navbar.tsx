@@ -65,7 +65,7 @@ export default function Navbar() {
                 {link.name}
               </a>
             ))}
-            <a href="#join" className="btn-primary text-sm">
+            <a href="#contact-form" className="btn-primary text-sm">
               Contact
             </a>
           </div>
@@ -113,7 +113,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="#join"
+              href="#contact-form"
               onClick={() => setIsMenuOpen(false)}
               className="block px-3 py-2 text-base font-medium text-white bg-earth-500 rounded-md"
             >
