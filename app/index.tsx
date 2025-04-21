@@ -21,6 +21,33 @@ export default function Index() {
   useEffect(() => {
     window.scrollTo(0, 0);
     setIsMounted(true);
+    
+    // Add scroll offset for hash links
+    const handleHashLinkScroll = () => {
+      const { hash } = window.location;
+      if (hash !== '') {
+        // Wait a bit for DOM to be fully rendered
+        setTimeout(() => {
+          const id = hash.replace('#', '');
+          const element = document.getElementById(id);
+          if (element) {
+            const yOffset = -100; // 250px offset from the top, showing content higher in viewport
+            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        }, 300);
+      }
+    };
+
+    // Initial call for when page loads with hash
+    handleHashLinkScroll();
+    
+    // Add event listener for when hash changes without page reload
+    window.addEventListener('hashchange', handleHashLinkScroll);
+    
+    return () => {
+      window.removeEventListener('hashchange', handleHashLinkScroll);
+    };
   }, []);
   
   return (
