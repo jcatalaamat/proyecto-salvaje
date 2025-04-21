@@ -36,10 +36,11 @@ const selfSufficiencyPrograms = [
     format: 'Interactive',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-        <path d="M11 3a8 8 0 018 8v10H3V11a8 8 0 018-8z" />
-        <path d="M11 3v19" />
-        <path d="M17 7a2 2 0 100 4 2 2 0 000-4z" />
-        <path d="M5 7a2 2 0 100 4 2 2 0 000-4z" />
+        <path d="M18 8h1a4 4 0 010 8h-1" />
+        <path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z" />
+        <line x1="6" y1="2" x2="6" y2="4" />
+        <line x1="10" y1="2" x2="10" y2="4" />
+        <line x1="14" y1="2" x2="14" y2="4" />
       </svg>
     )
   },
@@ -66,9 +67,10 @@ const selfSufficiencyPrograms = [
     format: 'Interactive',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-        <path d="M8 21h12a2 2 0 002-2v-2H10v2a2 2 0 01-2 2zm14-10v2a2 2 0 01-2 2H8a2 2 0 01-2-2v-2h16z" />
-        <path d="M4 15V5a2 2 0 012-2h12a2 2 0 012 2v10" />
-        <path d="M6 15v-2a2 2 0 012-2h8a2 2 0 012 2v2" />
+        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+        <line x1="9" y1="10" x2="9" y2="10" />
+        <line x1="13" y1="10" x2="13" y2="10" />
+        <line x1="17" y1="10" x2="17" y2="10" />
       </svg>
     )
   },
@@ -133,9 +135,13 @@ const transformationalPrograms = [
     format: 'Community',
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-        <path d="M8 21h12a2 2 0 002-2v-2H10v2a2 2 0 01-2 2zm14-10v2a2 2 0 01-2 2H8a2 2 0 01-2-2v-2h16z" />
-        <path d="M4 15V5a2 2 0 012-2h12a2 2 0 012 2v10" />
-        <path d="M6 15v-2a2 2 0 012-2h8a2 2 0 012 2v2" />
+        <circle cx="7" cy="5" r="2" />
+        <circle cx="17" cy="5" r="2" />
+        <circle cx="12" cy="10" r="2" />
+        <circle cx="7" cy="15" r="2" />
+        <circle cx="17" cy="15" r="2" />
+        <path d="M7 7v3c0 1.1.9 2 2 2h6c1.1 0 2-.9 2-2V7" />
+        <path d="M7 13v3c0 1.1.9 2 2 2h6c1.1 0 2-.9 2-2v-3" />
       </svg>
     )
   },
