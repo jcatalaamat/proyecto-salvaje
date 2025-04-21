@@ -147,7 +147,13 @@ export default function ProgramsSection() {
   const selfSufficiencyRef = useRef<HTMLDivElement>(null);
   const transformationalRef = useRef<HTMLDivElement>(null);
   const quoteRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(sectionRef, { once: false, amount: 0.2 });
+  
+  // Lower the threshold for mobile to make content more visible
+  const isInView = useInView(sectionRef, { 
+    once: false, 
+    amount: 0.05, // Reduced threshold - only need 5% in view to trigger
+    margin: "0px 0px -20% 0px" // Negative bottom margin to trigger earlier
+  });
   
   // GSAP animations
   useEffect(() => {
@@ -155,63 +161,69 @@ export default function ProgramsSection() {
       return;
     }
     
-    // Animate section title
+    // Check if we're on mobile
+    const isMobile = window.innerWidth < 768;
+    
+    // Adjust the start position for mobile to trigger animations earlier
+    const startPosition = isMobile ? "top 90%" : "top 80%";
+    
+    // Animate section title with adjusted trigger
     if (titleRef.current) {
       gsap.fromTo(
         titleRef.current.children,
-        { y: 50, opacity: 0 },
+        { y: isMobile ? 30 : 50, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          stagger: 0.1,
-          duration: 1,
+          stagger: isMobile ? 0.05 : 0.1,
+          duration: isMobile ? 0.7 : 1,
           ease: "power3.out",
           scrollTrigger: {
             trigger: titleRef.current,
-            start: "top 80%",
-            toggleActions: "play none none reverse"
+            start: startPosition,
+            toggleActions: "play none none none" // Changed to not reverse on scroll up
           }
         }
       );
     }
     
-    // Animate quote
+    // Animate quote with adjusted trigger
     if (quoteRef.current) {
       gsap.fromTo(
         quoteRef.current,
-        { y: 30, opacity: 0 },
+        { y: isMobile ? 20 : 30, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          duration: 1.2,
+          duration: isMobile ? 0.8 : 1.2,
           ease: "power2.out",
           scrollTrigger: {
             trigger: quoteRef.current,
-            start: "top 80%",
-            toggleActions: "play none none reverse"
+            start: startPosition,
+            toggleActions: "play none none none" // Changed to not reverse on scroll up
           }
         }
       );
     }
     
-    // Staggered animation for program cards
+    // Staggered animation for program cards with adjusted trigger
     [selfSufficiencyRef, transformationalRef].forEach(ref => {
       if (!ref.current) return;
       
       const cards = ref.current.querySelectorAll('.program-card');
       gsap.fromTo(
         cards,
-        { y: 100, opacity: 0 },
+        { y: isMobile ? 50 : 100, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          stagger: 0.15,
-          duration: 0.8,
+          stagger: isMobile ? 0.1 : 0.15,
+          duration: isMobile ? 0.6 : 0.8,
           ease: "power2.out",
           scrollTrigger: {
             trigger: ref.current,
-            start: "top 70%",
-            toggleActions: "play none none reverse"
+            start: startPosition,
+            toggleActions: "play none none none" // Changed to not reverse on scroll up
           }
         }
       );
@@ -222,7 +234,7 @@ export default function ProgramsSection() {
     <section 
       ref={sectionRef} 
       id="programs"
-      className="py-32 relative overflow-hidden bg-white"
+      className="py-16 md:py-32 relative overflow-hidden bg-white"
     >
       {/* Organic background shapes */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -240,32 +252,61 @@ export default function ProgramsSection() {
       <div className="absolute left-[5%] top-[10%] w-24 h-24 border border-gold-500/30 rounded-full opacity-70 pointer-events-none"></div>
       <div className="absolute right-[15%] bottom-[20%] w-40 h-40 border-2 border-forest-400/10 rounded-full opacity-40 pointer-events-none"></div>
       
-      <div className="max-w-7xl mx-auto px-4 relative z-10">
-        <div ref={titleRef} className="mb-16 max-w-3xl mx-auto text-center">
-          <span className="inline-block text-forest-600 uppercase tracking-[0.25em] text-sm font-medium mb-6">Sacred Learning</span>
-          <h2 className="section-heading mb-8">Immersive Educational Programs</h2>
-          <p className="text-xl text-earth-800 leading-relaxed font-light">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        <div ref={titleRef} className="mb-12 md:mb-16 max-w-3xl mx-auto text-center">
+          <motion.span 
+            className="inline-block text-forest-600 uppercase tracking-[0.25em] text-sm font-medium mb-4 md:mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }} // Always visible without isInView condition
+            transition={{ duration: 0.6 }}
+          >
+            Sacred Learning
+          </motion.span>
+          <motion.h2 
+            className="section-heading text-2xl sm:text-3xl md:text-4xl mb-6 md:mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }} // Always visible without isInView condition
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            Immersive Educational Programs
+          </motion.h2>
+          <motion.p 
+            className="text-lg md:text-xl text-earth-800 leading-relaxed font-light"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }} // Always visible without isInView condition
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             Teaching individuals how to be self-sufficient, self-aware, in right relationship, and to develop critical thinking, emotional skills, and social consciousness — to be in service of the collective.
-          </p>
+          </motion.p>
         </div>
         
         {/* Quote block */}
-        <div 
+        <motion.div 
           ref={quoteRef}
-          className="sacred-callout text-center mb-20"
+          className="sacred-callout text-center mb-12 md:mb-20"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }} // Use whileInView instead
+          viewport={{ once: false, amount: 0.1 }} // Very low threshold to make it visible sooner
+          transition={{ duration: 0.8 }}
         >
-          <p className="font-serif text-xl md:text-2xl text-earth-800 italic">
+          <p className="font-serif text-lg md:text-xl lg:text-2xl text-earth-800 italic">
             "What we teach and remember is the rhythmic balance of natural systems, the art of relating, and the wisdom that flows through indigenous lineages."
           </p>
-        </div>
+        </motion.div>
         
         {/* Self-Sufficiency and Emotional Literacy Section */}
-        <div className="mb-24">
-          <h3 className="text-2xl md:text-3xl font-serif text-earth-900 mb-10 text-center">
+        <div className="mb-16 md:mb-24">
+          <motion.h3 
+            className="text-xl sm:text-2xl md:text-3xl font-serif text-earth-900 mb-8 md:mb-10 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }} // Use whileInView instead
+            viewport={{ once: false, amount: 0.1 }} // Very low threshold to make it visible sooner
+            transition={{ duration: 0.6 }}
+          >
             Curriculum of Self-Sufficiency <span className="text-earth-600">&</span> Emotional Literacy
-          </h3>
+          </motion.h3>
           
-          <div ref={selfSufficiencyRef} className="grid md:grid-cols-2 gap-8">
+          <div ref={selfSufficiencyRef} className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {selfSufficiencyPrograms.map((program) => (
               <div 
                 key={program.id}
@@ -276,17 +317,17 @@ export default function ProgramsSection() {
                   <div className="absolute inset-0 bg-texture-paper opacity-30"></div>
                   
                   {/* Card content */}
-                  <div className="p-8 md:p-10 relative z-10">
-                    <div className="flex flex-col md:flex-row md:items-start gap-6 mb-6">
-                      <div className="w-20 h-20 rounded-full bg-forest-50 flex items-center justify-center border border-forest-100 text-forest-700 shadow-sm flex-shrink-0 mx-auto md:mx-0">
-                        <div className="w-10 h-10">
+                  <div className="p-6 md:p-8 lg:p-10 relative z-10">
+                    <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-6 mb-4 md:mb-6">
+                      <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-forest-50 flex items-center justify-center border border-forest-100 text-forest-700 shadow-sm flex-shrink-0 mx-auto md:mx-0">
+                        <div className="w-8 h-8 md:w-10 md:h-10">
                           {program.icon}
                         </div>
                       </div>
                       
                       <div>
-                        <h3 className="text-2xl font-serif text-forest-900 mb-2 text-center md:text-left">{program.title}</h3>
-                        <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm">
+                        <h3 className="text-xl md:text-2xl font-serif text-forest-900 mb-2 text-center md:text-left">{program.title}</h3>
+                        <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 md:gap-4 text-xs md:text-sm">
                           <span className="inline-flex items-center px-3 py-1 rounded-full bg-forest-50 text-forest-800 border border-forest-100">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -303,7 +344,7 @@ export default function ProgramsSection() {
                       </div>
                     </div>
                     
-                    <p className="text-earth-700 leading-relaxed mb-8">
+                    <p className="text-sm md:text-base text-earth-700 leading-relaxed mb-6 md:mb-8">
                       {program.description}
                     </p>
                     
@@ -331,17 +372,23 @@ export default function ProgramsSection() {
         </div>
         
         {/* Decorative separator */}
-        <div className="sacred-separator my-16">
+        <div className="sacred-separator my-12 md:my-16">
           <span className="sacred-separator-symbol">✧</span>
         </div>
         
         {/* Transformational Practices Section */}
         <div>
-          <h3 className="text-2xl md:text-3xl font-serif text-earth-900 mb-10 text-center">
+          <motion.h3 
+            className="text-xl sm:text-2xl md:text-3xl font-serif text-earth-900 mb-8 md:mb-10 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }} // Use whileInView instead
+            viewport={{ once: false, amount: 0.1 }} // Very low threshold to make it visible sooner
+            transition={{ duration: 0.6 }}
+          >
             Transformational Practices
-          </h3>
+          </motion.h3>
           
-          <div ref={transformationalRef} className="grid md:grid-cols-2 gap-8">
+          <div ref={transformationalRef} className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {transformationalPrograms.map((program) => (
               <div 
                 key={program.id}
@@ -352,17 +399,17 @@ export default function ProgramsSection() {
                   <div className="absolute inset-0 bg-texture-paper opacity-30"></div>
                   
                   {/* Card content */}
-                  <div className="p-8 md:p-10 relative z-10">
-                    <div className="flex flex-col md:flex-row md:items-start gap-6 mb-6">
-                      <div className="w-20 h-20 rounded-full bg-gold-50 flex items-center justify-center border border-gold-200 text-gold-700 shadow-sm flex-shrink-0 mx-auto md:mx-0">
-                        <div className="w-10 h-10">
+                  <div className="p-6 md:p-8 lg:p-10 relative z-10">
+                    <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-6 mb-4 md:mb-6">
+                      <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gold-50 flex items-center justify-center border border-gold-200 text-gold-700 shadow-sm flex-shrink-0 mx-auto md:mx-0">
+                        <div className="w-8 h-8 md:w-10 md:h-10">
                           {program.icon}
                         </div>
                       </div>
                       
                       <div>
-                        <h3 className="text-2xl font-serif text-earth-900 mb-2 text-center md:text-left">{program.title}</h3>
-                        <div className="flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm">
+                        <h3 className="text-xl md:text-2xl font-serif text-earth-900 mb-2 text-center md:text-left">{program.title}</h3>
+                        <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 md:gap-4 text-xs md:text-sm">
                           <span className="inline-flex items-center px-3 py-1 rounded-full bg-gold-50 text-earth-800 border border-gold-200">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -379,7 +426,7 @@ export default function ProgramsSection() {
                       </div>
                     </div>
                     
-                    <p className="text-earth-700 leading-relaxed mb-8">
+                    <p className="text-sm md:text-base text-earth-700 leading-relaxed mb-6 md:mb-8">
                       {program.description}
                     </p>
                     
@@ -408,21 +455,30 @@ export default function ProgramsSection() {
         
         {/* Call to action */}
         <motion.div 
-          className="mt-20 text-center"
+          className="mt-14 md:mt-20 text-center"
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          whileInView={{ opacity: 1, y: 0 }} // Use whileInView instead
+          viewport={{ once: false, amount: 0.1 }} // Very low threshold to make it visible sooner
+          transition={{ duration: 0.8 }}
         >
           <div className="relative inline-block">
             <div className="absolute inset-0 bg-gradient-to-r from-forest-200/30 via-gold-200/40 to-earth-200/30 blur-xl rounded-full transform -translate-y-1/4 scale-[1.2] opacity-70"></div>
             <div className="relative">
-              <h3 className="text-2xl font-serif text-earth-900 mb-6">Ready to walk this path of learning?</h3>
+              <motion.h3 
+                className="text-xl md:text-2xl font-serif text-earth-900 mb-4 md:mb-6"
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }} // Use whileInView instead
+                viewport={{ once: false, amount: 0.1 }} // Very low threshold to make it visible sooner
+                transition={{ duration: 0.5 }}
+              >
+                Ready to walk this path of learning?
+              </motion.h3>
               <a 
                 href="#calendar" 
-                className="btn-primary-gold px-8 py-3 rounded-full inline-flex items-center shadow-xl transition-all duration-300 transform hover:scale-105"
+                className="btn-primary-gold px-6 md:px-8 py-2 md:py-3 rounded-full inline-flex items-center shadow-xl transition-all duration-300 transform hover:scale-105 text-sm md:text-base"
               >
                 <span>View Program Calendar</span>
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 md:h-5 md:w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
                 </svg>
               </a>
