@@ -19,6 +19,12 @@ const selfSufficiencyPrograms = [
     description: 'Learn sustainable building techniques, permaculture design principles, and renewable energy systems for self-sufficient living in harmony with nature.',
     duration: '4 weeks',
     format: 'Immersive',
+    color: {
+      bg: 'bg-forest-50',
+      border: 'border-forest-100',
+      text: 'text-forest-700',
+      hover: 'hover:bg-forest-50 group-hover:border-forest-400'
+    },
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <path d="M12 2a9 9 0 019 9c0 3.18-1.65 6.17-4.35 7.86L12 22l-4.65-3.14A9.06 9.06 0 013 11a9 9 0 019-9z" />
@@ -34,6 +40,12 @@ const selfSufficiencyPrograms = [
     description: 'Explore holistic approaches to nutrition, health, somatics, and nervous system regulation for individual and collective wellbeing.',
     duration: '2 weeks',
     format: 'Interactive',
+    color: {
+      bg: 'bg-earth-50', 
+      border: 'border-earth-100',
+      text: 'text-earth-700',
+      hover: 'hover:bg-earth-50 group-hover:border-earth-400'
+    },
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <path d="M18 8h1a4 4 0 010 8h-1" />
@@ -50,6 +62,12 @@ const selfSufficiencyPrograms = [
     description: 'Develop emotional intelligence, family dynamics awareness, and self-care practices for healthier relationships and personal growth.',
     duration: '2 weeks',
     format: 'Experiential',
+    color: {
+      bg: 'bg-terracotta-100',
+      border: 'border-terracotta-200',
+      text: 'text-terracotta-700',
+      hover: 'hover:bg-terracotta-50 group-hover:border-terracotta-400'
+    },
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <path d="M20.42 4.58a5.4 5.4 0 00-7.65 0l-.77.78-.77-.78a5.4 5.4 0 00-7.65 0C1.46 6.7 1.33 10.28 4 13l8 8 8-8c2.67-2.72 2.54-6.3.42-8.42z" />
@@ -65,6 +83,12 @@ const selfSufficiencyPrograms = [
     description: 'Master effective communication skills, conflict resolution, and authentic relating practices for building stronger connections and community.',
     duration: '2 weeks',
     format: 'Interactive',
+    color: {
+      bg: 'bg-earth-50',
+      border: 'border-earth-100',
+      text: 'text-earth-700',
+      hover: 'hover:bg-earth-50 group-hover:border-earth-400'
+    },
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
@@ -84,6 +108,12 @@ const transformationalPrograms = [
     description: 'Explore relationships with the sacred, animism, and integration practices that honor our connection to all living beings and the Earth.',
     duration: '2 weeks',
     format: 'Ceremonial',
+    color: {
+      bg: 'bg-gold-50',
+      border: 'border-gold-200',
+      text: 'text-gold-700',
+      hover: 'hover:bg-gold-50 group-hover:border-gold-400'
+    },
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
@@ -97,6 +127,12 @@ const transformationalPrograms = [
     description: 'Connect with elemental forces and participate in ceremonial practices that foster deep transformation and spiritual growth.',
     duration: '3 weeks',
     format: 'Sacred',
+    color: {
+      bg: 'bg-earth-50',
+      border: 'border-earth-100',
+      text: 'text-earth-700',
+      hover: 'hover:bg-earth-50 group-hover:border-earth-400'
+    },
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <path d="M3 21h18" />
@@ -115,6 +151,12 @@ const transformationalPrograms = [
     description: 'Support youth in meaningful rites of passage and vision quests that connect them to their purpose and place in the community.',
     duration: '1 week',
     format: 'Immersive',
+    color: {
+      bg: 'bg-forest-50',
+      border: 'border-forest-100',
+      text: 'text-forest-700',
+      hover: 'hover:bg-forest-50 group-hover:border-forest-400'
+    },
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <circle cx="12" cy="8" r="5" />
@@ -133,6 +175,12 @@ const transformationalPrograms = [
     description: 'Participate in cross-pollination gatherings and vision-to-action incubators that bring together families and communities for collective growth.',
     duration: '2 weeks',
     format: 'Community',
+    color: {
+      bg: 'bg-earth-50',
+      border: 'border-earth-100',
+      text: 'text-earth-700',
+      hover: 'hover:bg-earth-50 group-hover:border-earth-400'
+    },
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
         <circle cx="7" cy="5" r="2" />
@@ -318,14 +366,14 @@ export default function ProgramsSection() {
                 key={program.id}
                 className="program-card relative overflow-visible h-full p-1 mb-2"
               >
-                <div className="relative bg-white rounded-2xl overflow-hidden border border-forest-100 group transition-all duration-500 transform hover:-translate-y-1 h-full" style={{ boxShadow: '0 4px 20px -2px rgba(0, 32, 19, 0.12)' }}>
+                <div className={`relative bg-white rounded-2xl overflow-hidden border ${program.color.border} group transition-all duration-500 transform hover:-translate-y-1 h-full`} style={{ boxShadow: '0 4px 20px -2px rgba(0, 32, 19, 0.12)' }}>
                   {/* Card background pattern */}
                   <div className="absolute inset-0 bg-texture-paper opacity-30"></div>
                   
                   {/* Card content */}
                   <div className="p-6 md:p-8 lg:p-10 relative z-10">
                     <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-6 mb-4 md:mb-6">
-                      <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-forest-50 flex items-center justify-center border border-forest-100 text-forest-700 shadow-sm flex-shrink-0 mx-auto md:mx-0">
+                      <div className={`w-16 h-16 md:w-20 md:h-20 rounded-full ${program.color.bg} flex items-center justify-center border ${program.color.border} ${program.color.text} shadow-sm flex-shrink-0 mx-auto md:mx-0`}>
                         <div className="w-8 h-8 md:w-10 md:h-10">
                           {program.icon}
                         </div>
@@ -334,13 +382,13 @@ export default function ProgramsSection() {
                       <div>
                         <h3 className="text-xl md:text-2xl font-serif text-earth-900 mb-2 text-center md:text-left">{program.title}</h3>
                         <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 md:gap-4 text-xs md:text-sm">
-                          <span className="inline-flex items-center px-3 py-1 rounded-full bg-forest-50 text-earth-800 border border-forest-100">
+                          <span className={`inline-flex items-center px-3 py-1 rounded-full ${program.color.bg} text-earth-800 border ${program.color.border}`}>
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                             </svg>
                             {program.duration}
                           </span>
-                          <span className="inline-flex items-center px-3 py-1 rounded-full bg-earth-50 text-earth-800 border border-earth-100">
+                          <span className={`inline-flex items-center px-3 py-1 rounded-full ${program.color.bg} text-earth-800 border ${program.color.border}`}>
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                             </svg>
@@ -359,7 +407,7 @@ export default function ProgramsSection() {
                         href="mailto:info@proyectosalvaje.com" 
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-outline-earth px-6 py-2 rounded-full inline-flex items-center hover:bg-forest-50 transition-all duration-300 group-hover:border-forest-400"
+                        className={`px-6 py-2 rounded-full inline-flex items-center border ${program.color.border} ${program.color.text} ${program.color.hover} transition-all duration-300`}
                       >
                         <span>Learn More</span>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
@@ -370,8 +418,8 @@ export default function ProgramsSection() {
                   </div>
                   
                   {/* Decorative corner element */}
-                  <div className="absolute top-0 right-0 w-20 h-20 overflow-hidden text-forest-100">
-                    <div className="absolute -top-10 -right-10 w-20 h-20 transform rotate-45 bg-forest-50/70 border-b border-forest-100/50"></div>
+                  <div className={`absolute top-0 right-0 w-20 h-20 overflow-hidden text-${program.color.border.split('-')[1]}`}>
+                    <div className={`absolute -top-10 -right-10 w-20 h-20 transform rotate-45 ${program.color.bg}/70 border-b ${program.color.border}/50`}></div>
                   </div>
                 </div>
               </div>
@@ -393,7 +441,7 @@ export default function ProgramsSection() {
             viewport={{ once: false, amount: 0.1 }} // Very low threshold to make it visible sooner
             transition={{ duration: 0.6 }}
           >
-            Transformational <span className="text-gold-500">Practices</span>
+            Transformational <span className="text-gold-600">Practices</span>
           </motion.h3>
           
           <div ref={transformationalRef} className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
@@ -402,14 +450,14 @@ export default function ProgramsSection() {
                 key={program.id}
                 className="program-card relative overflow-visible h-full p-1 mb-2"
               >
-                <div className="relative bg-white rounded-2xl overflow-hidden border border-gold-200 group transition-all duration-500 transform hover:-translate-y-1 h-full" style={{ boxShadow: '0 4px 20px -2px rgba(76, 29, 0, 0.1)' }}>
+                <div className={`relative bg-white rounded-2xl overflow-hidden border ${program.color.border} group transition-all duration-500 transform hover:-translate-y-1 h-full`} style={{ boxShadow: '0 4px 20px -2px rgba(76, 29, 0, 0.1)' }}>
                   {/* Card background pattern */}
                   <div className="absolute inset-0 bg-texture-paper opacity-30"></div>
                   
                   {/* Card content */}
                   <div className="p-6 md:p-8 lg:p-10 relative z-10">
                     <div className="flex flex-col md:flex-row md:items-start gap-4 md:gap-6 mb-4 md:mb-6">
-                      <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gold-50 flex items-center justify-center border border-gold-200 text-gold-700 shadow-sm flex-shrink-0 mx-auto md:mx-0">
+                      <div className={`w-16 h-16 md:w-20 md:h-20 rounded-full bg-[#f6f2eb] flex items-center justify-center border border-[#E6D7C4] text-earth-700 shadow-sm flex-shrink-0 mx-auto md:mx-0`}>
                         <div className="w-8 h-8 md:w-10 md:h-10">
                           {program.icon}
                         </div>
@@ -418,13 +466,13 @@ export default function ProgramsSection() {
                       <div>
                         <h3 className="text-xl md:text-2xl font-serif text-earth-900 mb-2 text-center md:text-left">{program.title}</h3>
                         <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 md:gap-4 text-xs md:text-sm">
-                          <span className="inline-flex items-center px-3 py-1 rounded-full bg-gold-50 text-earth-800 border border-gold-200">
+                          <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#f6f2eb] text-earth-800 border border-[#E6D7C4]">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                             </svg>
                             {program.duration}
                           </span>
-                          <span className="inline-flex items-center px-3 py-1 rounded-full bg-earth-50 text-earth-800 border border-earth-100">
+                          <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#f6f2eb] text-earth-800 border border-[#E6D7C4]">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                             </svg>
@@ -443,7 +491,7 @@ export default function ProgramsSection() {
                         href="mailto:info@proyectosalvaje.com" 
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-outline-earth px-6 py-2 rounded-full inline-flex items-center hover:bg-gold-50 transition-all duration-300 group-hover:border-gold-400"
+                        className="px-6 py-2 rounded-full inline-flex items-center border border-[#E6D7C4] text-earth-800 hover:bg-[#f6f2eb] transition-all duration-300"
                       >
                         <span>Learn More</span>
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 20 20" fill="currentColor">
@@ -454,8 +502,8 @@ export default function ProgramsSection() {
                   </div>
                   
                   {/* Decorative corner element */}
-                  <div className="absolute top-0 right-0 w-20 h-20 overflow-hidden text-gold-100">
-                    <div className="absolute -top-10 -right-10 w-20 h-20 transform rotate-45 bg-gold-50/70 border-b border-gold-100/50"></div>
+                  <div className={`absolute top-0 right-0 w-20 h-20 overflow-hidden text-${program.color.border.split('-')[1]}`}>
+                    <div className={`absolute -top-10 -right-10 w-20 h-20 transform rotate-45 ${program.color.bg}/70 border-b ${program.color.border}/50`}></div>
                   </div>
                 </div>
               </div>
