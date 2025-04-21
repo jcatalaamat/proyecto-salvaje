@@ -27,14 +27,6 @@ export default function Hero() {
     // Initial animation sequence
     const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
     
-    // Animate the hero title with more dynamic character animation
-    tl.fromTo(
-      titleRef.current?.querySelectorAll('.char'),
-      { y: 100, opacity: 0 },
-      { y: 0, opacity: 1, stagger: 0.03, duration: 1.4 },
-      0.5
-    );
-    
     // Animate sacred geometry circles with staggered delay and more organic motion
     tl.fromTo(
       circleRefs.current,
@@ -66,29 +58,17 @@ export default function Hero() {
   useEffect(() => {
     if (!titleRef.current) return;
     
+    // Instead of using character splitting which causes cropping issues, 
+    // use a simpler approach with proper line height
     const text = titleRef.current.innerText;
-    let splitHTML = '';
+    titleRef.current.innerHTML = text;
     
-    // Improved text splitting with better handling for line breaks
-    const lines = text.split('\n');
-    lines.forEach((line, lineIndex) => {
-      // Add a line container with proper spacing
-      splitHTML += '<div class="line-container" style="overflow: visible; line-height: 1.3;">';
-      
-      // Process each character in the line
-      line.split('').forEach(char => {
-        splitHTML += `<span class="char inline-block transform" style="margin-bottom: 0.1em;">${char === ' ' ? '&nbsp;' : char}</span>`;
-      });
-      
-      splitHTML += '</div>';
-      
-      // Add a line break if not the last line
-      if (lineIndex < lines.length - 1) {
-        splitHTML += '<br/>';
-      }
-    });
-    
-    titleRef.current.innerHTML = splitHTML;
+    // Apply animations to the whole element instead of individual characters
+    gsap.fromTo(
+      titleRef.current,
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1.4, ease: "power3.out", delay: 0.5 }
+    );
   }, []);
 
   return (
@@ -126,10 +106,10 @@ export default function Hero() {
       {/* Additional organic decorative elements */}
       <div className="decorative-element absolute left-[15%] top-[25%] w-32 h-32 opacity-30">
         <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M50 5C74.8528 5 95 25.1472 95 50C95 74.8528 74.8528 95 50 95C25.1472 95 5 74.8528 5 50C5 25.1472 25.1472 5 50 5Z" stroke="var(--color-clay)" strokeWidth="0.5"/>
-          <path d="M50 20C66.5685 20 80 33.4315 80 50C80 66.5685 66.5685 80 50 80C33.4315 80 20 66.5685 20 50C20 33.4315 33.4315 20 50 20Z" stroke="var(--color-clay)" strokeWidth="0.5"/>
-          <path d="M65 50C65 58.2843 58.2843 65 50 65C41.7157 65 35 58.2843 35 50C35 41.7157 41.7157 35 50 35C58.2843 35 65 41.7157 65 50Z" stroke="var(--color-clay)" strokeWidth="0.5"/>
-          <path d="M50 5V95M5 50H95" stroke="var(--color-clay)" strokeWidth="0.3"/>
+          <path d="M50 5C74.8528 5 95 25.1472 95 50C95 74.8528 74.8528 95 50 95C25.1472 95 5 74.8528 5 50C5 25.1472 25.1472 5 50 5Z" stroke="currentColor" strokeWidth="0.5"/>
+          <path d="M50 20C66.5685 20 80 33.4315 80 50C80 66.5685 66.5685 80 50 80C33.4315 80 20 66.5685 20 50C20 33.4315 33.4315 20 50 20Z" stroke="currentColor" strokeWidth="0.5"/>
+          <path d="M65 50C65 58.2843 58.2843 65 50 65C41.7157 65 35 58.2843 35 50C35 41.7157 41.7157 35 50 35C58.2843 35 65 41.7157 65 50Z" stroke="currentColor" strokeWidth="0.5"/>
+          <path d="M50 5V95M5 50H95" stroke="currentColor" strokeWidth="0.3"/>
         </svg>
       </div>
       
@@ -161,8 +141,8 @@ export default function Hero() {
           
           <h1 
             ref={titleRef}
-            className="font-serif text-4xl md:text-7xl text-earth-900 mb-6 leading-normal md:leading-tight"
-            style={{ wordSpacing: '0.1em' }}
+            className="font-serif text-4xl md:text-7xl text-earth-900 mb-6 leading-relaxed md:leading-tight"
+            style={{ wordBreak: 'normal', overflowWrap: 'break-word', hyphens: 'manual' }}
           >
             A regenerative village school for truth, healing, and sovereign living
           </h1>
@@ -195,7 +175,7 @@ export default function Hero() {
           </motion.div>
         </div>
         
-        {/* Enhanced scroll indicator with more organic animation */}
+        {/* Enhanced scroll indicator with centered position and fixed width */}
         <motion.div 
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -207,7 +187,7 @@ export default function Hero() {
             repeatDelay: 0.8,
             ease: "easeInOut"
           }}
-          className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-center"
+          className="absolute bottom-12 left-0 right-0 mx-auto text-center w-full"
         >
           <span className="block text-earth-600 text-sm tracking-wider mb-2 uppercase">Begin the Journey</span>
           <div className="w-7 h-12 border-2 border-earth-400 rounded-full flex justify-center pt-2 mx-auto">

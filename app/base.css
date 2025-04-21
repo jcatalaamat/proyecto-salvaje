@@ -493,3 +493,23 @@ input, select, textarea {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Timeline navigation button active state */
+.bg-clay {
+  background-color: var(--color-earth-500, var(--color-clay));
+}
+
+/* Timeline navigation button border */
+.border-clay {
+  border-color: var(--color-earth-500, var(--color-clay));
+}
+
+/* Timeline navigation button text */
+.text-clay {
+  color: var(--color-earth-500, var(--color-clay));
+}
+
+/* Ring focus styling */
+.ring-clay {
+  --tw-ring-color: var(--color-earth-500, var(--color-clay));
+}
