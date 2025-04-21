@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Set this to your default branch
+      - main
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          persist-credentials: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -27,17 +29,52 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
+      - name: Set environment variable
+        run: echo "ONE_SERVER_URL=https://proyectosalvaje.com" > .env
+
       - name: Build
         run: yarn build:web
         env:
           ONE_SERVER_URL: https://proyectosalvaje.com
 
-      - name: Setup Custom Domain
-        run: echo "proyectosalvaje.com" > ./dist/CNAME
+      - name: Setup Git Identity
+        run: |
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "GitHub Actions"
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: dist  # The folder the action should deploy
-          branch: gh-pages  # The branch the action should deploy to
-          clean: true  # Automatically remove deleted files from the deploy branch 
+      - name: Deploy to GitHub Pages
+        run: |
+          # Create a temporary directory to checkout gh-pages branch
+          mkdir -p tmp-gh-pages
+          cd tmp-gh-pages
+
+          # Initialize git and checkout gh-pages branch
+          git init
+          git remote add origin https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git
+          git checkout -b gh-pages
+
+          # Remove everything except .git
+          find . -maxdepth 1 ! -name .git -exec rm -rf {} \; 2>/dev/null || true
+
+          # Copy over the contents of dist/client
+          cp -R ../dist/client/* .
+
+          # Create .nojekyll file to bypass Jekyll processing
+          touch .nojekyll
+
+          # Make sure CNAME file exists
+          echo "proyectosalvaje.com" > CNAME
+
+          # Add <title> tag directly to index.html if needed
+          if ! grep -q "<title" index.html; then
+            sed -i 's/<head>/<head><title>Proyecto Salvaje | Regenerative Village School<\/title>/' index.html
+          fi
+
+          # Commit and push
+          git add -A
+          git commit -m "Deploy website to GitHub Pages"
+          git push -f origin gh-pages
+
+          # Clean up
+          cd ..
+          rm -rf tmp-gh-pages 
