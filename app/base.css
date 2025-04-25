@@ -13,11 +13,14 @@
 
 /* Custom color variables */
 :root {
-  --color-clay: #b09480;
-  --color-dusty-sage: #d5d1c7;
-  --color-amber-gold: #e7c7a2;
-  --color-moon-white: #fbf9f5;
-  --color-night-earth: #3b2f2f;
+  --color-clay: #C3916F;
+  --color-dusty-sage: #F2E6CF;
+  --color-amber-gold: #ECD4A9;
+  --color-moon-white: #FCF7EA;
+  --color-night-earth: #4E4236;
+  --color-warm-sand: #F8E9D7;
+  --color-cacao: #B78A67;
+  --color-sienna: #C49B76;
 }
 
 @layer base {
@@ -63,9 +66,9 @@
 
 @layer components {
   .btn-primary {
-    @apply px-8 py-3 bg-[#A77F63] text-white rounded-full 
-      hover:bg-[#8D6E56] transition-all duration-300 transform hover:scale-[1.03]
-      shadow-[0_0_15px_rgba(167,127,99,0.3)] hover:shadow-[0_0_25px_rgba(167,127,99,0.5)]
+    @apply px-8 py-3 bg-[#C3916F] text-white rounded-full 
+      hover:bg-[#AA7D5D] transition-all duration-300 transform hover:scale-[1.03]
+      shadow-[0_0_15px_rgba(195,145,111,0.3)] hover:shadow-[0_0_25px_rgba(195,145,111,0.5)]
       relative overflow-hidden;
     background-color: var(--color-clay);
   }
@@ -81,30 +84,30 @@
   }
   
   .btn-secondary {
-    @apply px-8 py-3 border-2 border-[#A77F63] text-[#A77F63] rounded-full 
-      hover:bg-[#F6EEE3] transition-all duration-300 
-      shadow-[0_0_10px_rgba(167,127,99,0.15)] hover:shadow-[0_0_20px_rgba(167,127,99,0.25)];
+    @apply px-8 py-3 border-2 border-[#C3916F] text-[#C3916F] rounded-full 
+      hover:bg-[#FCF7EA] transition-all duration-300 
+      shadow-[0_0_10px_rgba(195,145,111,0.15)] hover:shadow-[0_0_20px_rgba(195,145,111,0.25)];
     border-color: var(--color-clay);
     color: var(--color-clay);
   }
   
   .section-heading {
-    @apply text-3xl md:text-5xl font-semibold text-[#3B2F2F] mb-10 text-center 
+    @apply text-3xl md:text-5xl font-semibold text-[#4E4236] mb-10 text-center 
       relative tracking-wide leading-tight;
     color: var(--color-night-earth);
   }
   
   .section-heading::after {
     content: '';
-    @apply block w-12 h-[2px] bg-[#D4B48E] mx-auto mt-4;
+    @apply block w-12 h-[2px] bg-[#ECD4A9] mx-auto mt-4;
     background-color: var(--color-amber-gold);
   }
   
   .sacred-card {
     @apply p-8 rounded-lg shadow-lg relative overflow-hidden 
-      bg-gradient-to-br from-[#F6EEE3] to-[#EAE0D0]
+      bg-gradient-to-br from-[#FCF7EA] to-[#F2E6CF]
       transition-all duration-500 hover:shadow-xl;
-    background: linear-gradient(135deg, var(--color-moon-white) 0%, var(--color-dusty-sage) 100%);
+    background: linear-gradient(135deg, var(--color-moon-white) 0%, var(--color-warm-sand) 100%);
   }
   
   .sacred-card::before {
@@ -179,9 +182,9 @@
 
 /* Earth-inspired decorative elements */
 .sacred-circle {
-  @apply absolute rounded-full bg-[#D4B48E]/10;
+  @apply absolute rounded-full bg-[#ECD4A9]/10;
   animation: pulse 8s infinite alternate ease-in-out;
-  background-color: rgba(231, 199, 162, 0.1);
+  background-color: rgba(236, 212, 169, 0.1);
 }
 
 /* Soft flowing animations */
@@ -212,8 +215,8 @@
 }
 
 @keyframes glow {
-  0% { box-shadow: 0 0 15px rgba(212, 180, 142, 0.3); }
-  100% { box-shadow: 0 0 25px rgba(212, 180, 142, 0.6); }
+  0% { box-shadow: 0 0 15px rgba(236, 212, 169, 0.3); }
+  100% { box-shadow: 0 0 25px rgba(236, 212, 169, 0.6); }
 }
 
 @keyframes pulse {
@@ -251,30 +254,30 @@
 
 /* Gradient backgrounds */
 .sacred-gradient-earth {
-  background: linear-gradient(135deg, #F6EEE3 0%, #D6CDBF 100%);
+  background: linear-gradient(135deg, var(--color-moon-white) 0%, var(--color-warm-sand) 100%);
 }
 
 .sacred-gradient-clay {
-  background: linear-gradient(135deg, #A77F63 0%, #8D6E56 100%);
-  background: linear-gradient(135deg, var(--color-clay) 0%, rgba(146, 116, 100, 1) 100%);
+  background: linear-gradient(135deg, #C3916F 0%, #AA7D5D 100%);
+  background: linear-gradient(135deg, var(--color-clay) 0%, rgba(170, 125, 93, 1) 100%);
 }
 
 .sacred-gradient-sage {
-  background: linear-gradient(135deg, #D6CDBF 0%, #B7AFA0 100%);
-  background: linear-gradient(135deg, var(--color-dusty-sage) 0%, rgba(183, 175, 160, 1) 100%);
+  background: linear-gradient(135deg, #F2E6CF 0%, #E7CEA1 100%);
+  background: linear-gradient(135deg, var(--color-dusty-sage) 0%, rgba(231, 206, 161, 1) 100%);
 }
 
 .sacred-gradient-cocoa {
-  background: linear-gradient(135deg, #3B2F2F 0%, #2A2222 100%);
-  background: linear-gradient(135deg, var(--color-night-earth) 0%, rgba(42, 34, 34, 1) 100%);
+  background: linear-gradient(135deg, #4E4236 0%, #372F27 100%);
+  background: linear-gradient(135deg, var(--color-night-earth) 0%, rgba(55, 47, 39, 1) 100%);
 }
 
 .sacred-gradient-amber {
-  background: linear-gradient(135deg, var(--color-amber-gold) 0%, rgba(212, 180, 142, 1) 100%);
+  background: linear-gradient(135deg, var(--color-amber-gold) 0%, rgba(229, 199, 145, 1) 100%);
 }
 
 .sacred-gradient-moon {
-  background: linear-gradient(135deg, var(--color-moon-white) 0%, rgba(236, 232, 224, 1) 100%);
+  background: linear-gradient(135deg, var(--color-moon-white) 0%, rgba(242, 230, 207, 1) 100%);
 }
 
 /* Scroll decoration for dividers */

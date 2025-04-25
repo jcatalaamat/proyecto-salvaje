@@ -29,7 +29,7 @@ const visionPillars = [
         <path d="M12 2L14.5 9H22L16 13.5L18.5 20.5L12 16L5.5 20.5L8 13.5L2 9H9.5L12 2Z" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="1" />
       </svg>
     ),
-    color: "bg-gradient-to-br from-earth-50 to-earth-100 border-l-4 border-earth-500",
+    color: "bg-gradient-to-br from-earth-100 to-earth-200 border-l-4 border-earth-600",
     texture: "bg-[url('/images/textures/handmade-paper.png')]"
   },
   {
@@ -50,7 +50,7 @@ const visionPillars = [
         <path d="M12 7V17M7 12H17" stroke="currentColor" strokeWidth="1" />
       </svg>
     ),
-    color: "bg-gradient-to-br from-forest-50 to-forest-100 border-l-4 border-forest-500",
+    color: "bg-gradient-to-br from-forest-100 to-forest-200 border-l-4 border-forest-600",
     texture: "bg-[url('/images/textures/papyrus.png')]"
   },
   {
@@ -74,7 +74,7 @@ const visionPillars = [
         <path d="M8 21C8 18.7909 9.79086 17 12 17C14.2091 17 16 18.7909 16 21" stroke="currentColor" strokeWidth="1" />
       </svg>
     ),
-    color: "bg-gradient-to-br from-gold-100 to-gold-200 border-l-4 border-gold-500",
+    color: "bg-gradient-to-br from-gold-200 to-gold-300 border-l-4 border-gold-600",
     texture: "bg-[url('/images/textures/sand-grain.png')]"
   },
   {
@@ -96,7 +96,7 @@ const visionPillars = [
         <path d="M8 12H16" stroke="currentColor" strokeWidth="1" />
       </svg>
     ),
-    color: "bg-gradient-to-br from-terracotta-100 to-terracotta-200 border-l-4 border-terracotta-500",
+    color: "bg-gradient-to-br from-terracotta-200 to-terracotta-300 border-l-4 border-terracotta-600",
     texture: "bg-[url('/images/textures/handmade-paper.png')]"
   }
 ];
@@ -193,16 +193,16 @@ export default function VisionSection() {
   };
 
   return (
-    <section ref={sectionRef} id="about" className="py-32 relative overflow-hidden sacred-gradient-moon">
+    <section ref={sectionRef} id="about" className="py-32 relative overflow-hidden sacred-gradient-moon bg-earth-50/70">
       {/* Background organic shapes */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-1/2 h-1/2 opacity-[0.07]">
+        <div className="absolute top-0 right-0 w-1/2 h-1/2 opacity-[0.12]">
           <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
             <path fill="var(--color-night-earth)" d="M48.2,-63.8C62.7,-55.9,74.9,-42.8,78.2,-27.7C81.5,-12.7,75.9,4.2,69.3,19.2C62.7,34.1,55.1,47.1,43.4,54.6C31.7,62.1,15.9,64,-0.2,64.3C-16.2,64.5,-32.5,63.1,-45.4,55.3C-58.3,47.6,-67.9,33.4,-72.4,17.5C-76.8,1.6,-76.2,-16,-68.7,-29C-61.2,-42.1,-46.8,-50.6,-32.9,-58.5C-19,-66.5,-5.5,-73.9,8.3,-73.5C22.2,-73.1,33.7,-71.8,48.2,-63.8Z" transform="translate(100 100)" />
           </svg>
         </div>
         
-        <div className="absolute bottom-0 left-0 w-3/5 h-3/5 opacity-[0.05]">
+        <div className="absolute bottom-0 left-0 w-3/5 h-3/5 opacity-[0.10]">
           <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
             <path fill="var(--color-clay)" d="M44.9,-64.2C58.3,-53.9,69.5,-41.1,74,-26.3C78.5,-11.5,76.5,5.4,71.5,20.8C66.5,36.2,58.5,50.1,46.5,60.1C34.5,70.1,18.5,76.1,1.1,74.7C-16.3,73.3,-35,64.5,-50.9,52.2C-66.8,39.9,-80,24.1,-83.2,6.7C-86.4,-10.7,-79.5,-29.7,-67.2,-43.3C-54.9,-56.9,-37.1,-65.1,-21,-69.5C-4.9,-73.9,9.5,-74.6,23.3,-71.9C37.1,-69.3,50.3,-63.4,63.5,-53.5Z" transform="translate(100 100)" />
           </svg>
@@ -210,13 +210,13 @@ export default function VisionSection() {
       </div>
 
       {/* Enhanced decorative sacred circles and elements */}
-      <div className="absolute left-[15%] top-[15%] w-32 h-32 border-2 border-gold-500/20 rounded-full rotate-45 opacity-60 mix-blend-overlay"></div>
-      <div className="absolute right-[10%] bottom-[20%] w-40 h-40 border border-gold-500/20 rounded-full rotate-12 opacity-40 mix-blend-overlay"></div>
-      <div className="absolute left-[3%] bottom-[15%] w-20 h-20 border border-gold-500/30 rounded-full animate-pulse opacity-20 mix-blend-overlay"></div>
-      <div className="absolute right-[25%] top-[10%] w-24 h-24 border-2 border-earth-500/10 rounded-full opacity-30 mix-blend-overlay"></div>
+      <div className="absolute left-[15%] top-[15%] w-32 h-32 border-2 border-gold-600/30 rounded-full rotate-45 opacity-70 mix-blend-overlay"></div>
+      <div className="absolute right-[10%] bottom-[20%] w-40 h-40 border border-gold-600/30 rounded-full rotate-12 opacity-50 mix-blend-overlay"></div>
+      <div className="absolute left-[3%] bottom-[15%] w-20 h-20 border border-gold-600/40 rounded-full animate-pulse opacity-30 mix-blend-overlay"></div>
+      <div className="absolute right-[25%] top-[10%] w-24 h-24 border-2 border-earth-600/20 rounded-full opacity-40 mix-blend-overlay"></div>
       
       {/* Enhanced Sacred glyph */}
-      <div className="sacred-glyph left-[5%] top-[30%] w-40 h-40 opacity-40 mix-blend-overlay">
+      <div className="sacred-glyph left-[5%] top-[30%] w-40 h-40 opacity-50 mix-blend-overlay">
         <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
           <circle cx="50" cy="50" r="40" fill="none" stroke="var(--color-clay)" strokeWidth="0.5" />
           <path d="M50 10 L50 90 M10 50 L90 50" stroke="var(--color-clay)" strokeWidth="0.5" fill="none" />

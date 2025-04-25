@@ -5,28 +5,28 @@ export default {
     extend: {
       colors: {
         earth: {
-          50: '#F6EEE3',  // Sand
-          100: '#ECE4D5',
-          200: '#DCCCB0',
-          300: '#CAAD84',
-          400: '#B8935D',
-          500: '#A77F63',  // Clay
-          600: '#8D6E56',
-          700: '#72532A',
-          800: '#3B2F2F',  // Cocoa
-          900: '#2A2222',
+          50: '#FCF7EA',  // Richer, warmer background
+          100: '#F2E6CF',  // Rich warm beige
+          200: '#EDDCB9',  // Vibrant soft tone
+          300: '#E7CEA1',  // Golden unified tone
+          400: '#D8BC8C',  // Rich cacao tone
+          500: '#C49B76',  // Vibrant warm sienna
+          600: '#B78A67',  // Rich warm cacao
+          700: '#A07556',  // Deep caramel tone
+          800: '#4E4236',  // Enriched dark brown
+          900: '#372F27',  // Deep rich chocolate
         },
         forest: {
-          50: '#EEFDF2',
-          100: '#D6CDBF',  // Sage
-          200: '#B7AFA0',
-          300: '#98917F',
-          400: '#79735F',
-          500: '#5A5541',
-          600: '#474431',
-          700: '#333222',
-          800: '#222118',
-          900: '#15140E',
+          50: '#F4F5ED',
+          100: '#E8ECD7',
+          200: '#DBE0C0',
+          300: '#CCD3A7',
+          400: '#B7BE8E',
+          500: '#A4AB7C',
+          600: '#899164',
+          700: '#6F7652',
+          800: '#565C3F',
+          900: '#3D412D',
         },
         ocean: {
           50: '#EFF8FF',
@@ -41,26 +41,26 @@ export default {
           900: '#00408F',
         },
         gold: {
-          100: '#F2E9D8',
-          200: '#E6D3B1',
-          300: '#D9BD8B',
-          400: '#CDA764',
-          500: '#D4B48E',  // Primary gold
-          600: '#BA955A',
-          700: '#9E7B48',
-          800: '#826036',
-          900: '#664A28',
+          100: '#FBF4E3',
+          200: '#F7EBCD',
+          300: '#F2E0B5',
+          400: '#ECD4A9',  // Rich golden tone
+          500: '#E5C791',  // Vibrant rich gold
+          600: '#D9B67A',
+          700: '#C9A362',
+          800: '#AD8B4E',
+          900: '#8B6F3D',
         },
         terracotta: {
-          100: '#F5E6E0',
-          200: '#EACCC2',
-          300: '#E0B3A3',
-          400: '#D59985',
-          500: '#CB8066',
-          600: '#BF6748',
-          700: '#A3563B',
-          800: '#884632',
-          900: '#6C3729',
+          100: '#F8E9D7',  // Rich warm sand
+          200: '#F3D6BC',
+          300: '#EBC3A1',
+          400: '#E2B18A',
+          500: '#D39D74',
+          600: '#C3916F',  // Vibrant clay tone
+          700: '#AA7D5D',
+          800: '#8F694C',
+          900: '#75573E',
         },
       },
       fontFamily: {

@@ -161,7 +161,7 @@ export default function Index() {
             {/* Decorative divider for Indigenous section */}
             <div className="relative h-20 overflow-hidden">
               <svg 
-                className="absolute bottom-0 left-0 w-full"
+                className="absolute bottom-0 left-0 w-full opacity-90"
                 viewBox="0 0 1200 120" 
                 preserveAspectRatio="none"
               >
