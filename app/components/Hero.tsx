@@ -83,7 +83,7 @@ export default function Hero() {
               src="https://www.youtube.com/embed/SYMMEFsQ_-g?autoplay=1&mute=1&loop=1&playlist=SYMMEFsQ_-g&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
               title="Proyecto Salvaje Background Video"
               frameBorder="0"
-              style={{ transform: 'scale(1.05) translateY(-2%)' }}
+              style={{ transform: 'scale(1.25) translateY(-5%)', objectFit: 'cover', objectPosition: 'center center' }}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
