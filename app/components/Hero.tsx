@@ -4,6 +4,7 @@ import gsap from 'gsap';
 
 export default function Hero() {
   const [scrollY, setScrollY] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1024);
   const heroRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const circleRefs = useRef<HTMLDivElement[]>([]);
@@ -21,8 +22,14 @@ export default function Hero() {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
+
+    // Track window width for responsive video scaling
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
     
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
     
     // Initial animation sequence
     const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
@@ -51,7 +58,10 @@ export default function Hero() {
       1.5
     );
     
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
   
   // Split text utility function with enhanced character splitting
@@ -71,19 +81,55 @@ export default function Hero() {
     );
   }, []);
 
+  // Get video styling based on screen width
+  const getVideoStyle = () => {
+    // For mobile devices - scale more aggressively
+    if (windowWidth < 480) {
+      return { 
+        transform: 'scale(3.5) translateY(2%)',
+        objectFit: 'cover',
+        objectPosition: 'center 30%',
+        background: '#000'
+      };
+    }
+    // For larger mobile devices
+    if (windowWidth < 768) {
+      return { 
+        transform: 'scale(2.4) translateY(1.75%)',
+        objectFit: 'cover',
+        objectPosition: 'center 30%',
+        background: '#000'
+      };
+    }
+    // For tablets
+    if (windowWidth < 1024) {
+      return { 
+        transform: 'scale(2) translateY(3%)',
+        objectFit: 'cover',
+        objectPosition: 'center center'
+      };
+    }
+    // For desktop - modest scale to avoid black bars
+    return { 
+      transform: 'scale(1.1) translateY(0%)',
+      objectFit: 'cover',
+      objectPosition: 'center center'
+    };
+  };
+
   return (
     <section ref={heroRef} className="relative min-h-screen overflow-hidden">
       {/* Enhanced cinematic background with parallax & texture effect */}
       <div className="absolute inset-0 z-0">
         {/* Cinematic video background with overlay - improved for mobile */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute w-full h-full">
+          <div className="absolute w-full h-full" style={{background: windowWidth < 768 ? '#000' : 'transparent'}}>
             <iframe 
               className="absolute w-full h-full object-cover"
               src="https://www.youtube.com/embed/SYMMEFsQ_-g?autoplay=1&mute=1&loop=1&playlist=SYMMEFsQ_-g&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
               title="Proyecto Salvaje Background Video"
               frameBorder="0"
-              style={{ transform: 'scale(1.25) translateY(-5%)', objectFit: 'cover', objectPosition: 'center center' }}
+              style={getVideoStyle()}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
