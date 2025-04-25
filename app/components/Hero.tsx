@@ -83,6 +83,7 @@ export default function Hero() {
               src="https://www.youtube.com/embed/SYMMEFsQ_-g?autoplay=1&mute=1&loop=1&playlist=SYMMEFsQ_-g&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
               title="Proyecto Salvaje Background Video"
               frameBorder="0"
+              style={{ transform: 'scale(1.05) translateY(-2%)' }}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
@@ -117,13 +118,13 @@ export default function Hero() {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="mb-6"
           >
-            <span className="text-earth-600 uppercase tracking-[0.2em] md:tracking-[0.3em] text-sm md:text-base font-medium">Regenerative Village School</span>
+            <span className="text-earth-300 uppercase tracking-[0.2em] md:tracking-[0.3em] text-sm md:text-base font-medium">Regenerative Village School</span>
           </motion.div>
           
           <h1 
             ref={titleRef}
-            className="font-serif text-[22px] md:text-5xl text-[#3b2f2f] mb-6 leading-snug md:leading-tight tracking-tight"
-            style={{ wordBreak: 'normal', overflowWrap: 'break-word', hyphens: 'manual' }}
+            className="font-serif text-[22px] md:text-5xl text-earth-100 mb-6 leading-snug md:leading-tight tracking-tight"
+            style={{ wordBreak: 'normal', overflowWrap: 'break-word', hyphens: 'manual', textShadow: '0 1px 3px rgba(0,0,0,0.3)' }}
           >
             Creation of an intentional regenerative community for human integrity and sovereign living
           </h1>
@@ -132,7 +133,8 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="text-base md:text-lg text-[#5a4633] max-w-md mx-auto mb-8 font-serif italic font-light"
+            className="text-base md:text-lg text-earth-200 max-w-md mx-auto mb-8 font-serif italic font-light"
+            style={{ textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}
           >
             A healing village, real-life school, and educational center dedicated to protecting freedom, bodily autonomy, and living in harmony with nature.
           </motion.p>
@@ -147,12 +149,12 @@ export default function Hero() {
               href="mailto:info@proyectosalvaje.com" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="hero-button btn-sacred-invite group relative overflow-hidden w-full md:w-auto border border-earth-500 text-[#3b2f2f] font-semibold px-6 py-3 rounded-full bg-white/70 hover:bg-earth-50"
+              className="hero-button btn-sacred-invite group relative overflow-hidden w-full md:w-auto border border-earth-500 text-earth-900 font-semibold px-6 py-3 rounded-full bg-earth-200/80 hover:bg-earth-200"
             >
               <span className="relative z-10">Join Our Community</span>
-              <span className="absolute inset-0 bg-earth-500 opacity-0 group-hover:opacity-10 transition-opacity duration-700 rounded-full transform group-hover:scale-110"></span>
+              <span className="absolute inset-0 bg-earth-300 opacity-0 group-hover:opacity-30 transition-opacity duration-700 rounded-full transform group-hover:scale-110"></span>
             </a>
-            <a href="#about" className="hero-button btn-secondary group w-full md:w-auto border border-earth-500 text-[#3b2f2f] font-medium px-6 py-3 rounded-full bg-transparent hover:bg-earth-50/70">
+            <a href="#about" className="hero-button btn-secondary group w-full md:w-auto border border-earth-300 text-earth-100 font-medium px-6 py-3 rounded-full bg-transparent hover:bg-earth-900/30">
               <span>Explore Our Vision</span>
               <svg className="inline-block ml-2 w-4 h-4 transition-transform duration-500 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15 5L21 12M21 12L15 19M21 12H3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -175,9 +177,9 @@ export default function Hero() {
           }}
           className="absolute bottom-12 left-0 right-0 mx-auto text-center w-full"
         >
-          <span className="block text-earth-600 text-sm tracking-wider mb-2 uppercase">Begin the Journey</span>
-          <div className="w-7 h-12 border-2 border-earth-400 rounded-full flex justify-center pt-2 mx-auto">
-            <div className="w-1.5 h-1.5 bg-earth-500 rounded-full animate-bounce"></div>
+          <span className="block text-earth-300 text-sm tracking-wider mb-2 uppercase">Begin the Journey</span>
+          <div className="w-7 h-12 border-2 border-earth-300 rounded-full flex justify-center pt-2 mx-auto">
+            <div className="w-1.5 h-1.5 bg-earth-400 rounded-full animate-bounce"></div>
           </div>
         </motion.div>
       </div>
