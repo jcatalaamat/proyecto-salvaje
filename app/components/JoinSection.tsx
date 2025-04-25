@@ -110,8 +110,8 @@ export default function JoinSection() {
           <span className="inline-block text-earth-600 uppercase tracking-[0.25em] text-sm font-medium mb-6">The Sacred Invitation</span>
           <h2 className="section-heading mb-8">Join Our Community</h2>
           <p className="text-xl text-earth-800 max-w-3xl mx-auto leading-relaxed font-light italic">
-            We are looking to offer shelter for those dedicated to supporting the collective and fighting for truth & dignity. 
-            If you feel called to be part of this project, there are several ways to contribute.
+          This is a call to those who feel the fire — to stand for truth, to care for the land, and to embody sacred leadership.
+          If you feel the resonance, there are many ways to offer your gifts and become part of this living vision.
           </p>
         </motion.div>
 
