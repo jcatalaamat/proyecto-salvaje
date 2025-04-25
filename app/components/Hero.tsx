@@ -88,9 +88,9 @@ export default function Hero() {
             ></iframe>
           </div>
           {/* Enhanced overlay for better legibility and ambiance on mobile */}
-          <div className="absolute inset-0 bg-gradient-to-b from-earth-50/95 via-earth-100/70 to-earth-100/60 md:from-earth-50/90 md:via-transparent md:to-earth-100/70"></div>
-          <div className="absolute inset-0 bg-[url('/images/texture-bg.jpg')] bg-cover bg-center bg-no-repeat mix-blend-overlay opacity-40"></div>
-          <div className="absolute inset-0 backdrop-blur-[3px] md:backdrop-blur-[2px]"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-earth-900/30 via-earth-900/20 to-earth-900/40 md:from-earth-900/20 md:via-transparent md:to-earth-900/30"></div>
+          <div className="absolute inset-0 bg-[url('/images/texture-bg.jpg')] bg-cover bg-center bg-no-repeat mix-blend-overlay opacity-10"></div>
+          <div className="absolute inset-0 backdrop-blur-[0px]"></div>
         </div>
       </div>
       
