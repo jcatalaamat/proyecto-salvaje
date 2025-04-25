@@ -77,16 +77,16 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         {/* Cinematic video background with overlay - improved for mobile */}
         <div className="absolute inset-0 overflow-hidden">
-          <video 
-            className="absolute w-full h-full object-cover object-center"
-            autoPlay
-            muted
-            loop
-            playsInline
-            poster="/images/texture-bg.jpg"
-          >
-            <source src="/videos/gentle-nature.mp4" type="video/mp4" />
-          </video>
+          <div className="absolute w-full h-full">
+            <iframe 
+              className="absolute w-full h-full object-cover"
+              src="https://www.youtube.com/embed/SYMMEFsQ_-g?autoplay=1&mute=1&loop=1&playlist=SYMMEFsQ_-g&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
+              title="Proyecto Salvaje Background Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
           {/* Enhanced overlay for better legibility and ambiance on mobile */}
           <div className="absolute inset-0 bg-gradient-to-b from-earth-50/95 via-earth-100/70 to-earth-100/60 md:from-earth-50/90 md:via-transparent md:to-earth-100/70"></div>
           <div className="absolute inset-0 bg-[url('/images/texture-bg.jpg')] bg-cover bg-center bg-no-repeat mix-blend-overlay opacity-40"></div>
@@ -101,25 +101,6 @@ export default function Hero() {
         <div ref={el => addToCircles(el)} className="sacred-circle w-[70vw] md:w-[45vw] h-[70vw] md:h-[45vw] right-[-30vw] top-[5vh] opacity-40 mix-blend-soft-light"></div>
         <div ref={el => addToCircles(el)} className="sacred-circle w-[60vw] md:w-[50vw] h-[60vw] md:h-[50vw] left-[0vw] bottom-[-20vh] opacity-40 mix-blend-soft-light"></div>
         <div ref={el => addToCircles(el)} className="sacred-circle w-[40vw] md:w-[30vw] h-[40vw] md:h-[30vw] right-[5vw] bottom-[-10vh] opacity-40 mix-blend-soft-light"></div>
-      </div>
-      
-      {/* Additional organic decorative elements */}
-      <div className="decorative-element absolute left-[15%] top-[25%] w-32 h-32 opacity-20">
-        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M50 5C74.8528 5 95 25.1472 95 50C95 74.8528 74.8528 95 50 95C25.1472 95 5 74.8528 5 50C5 25.1472 25.1472 5 50 5Z" stroke="currentColor" strokeWidth="0.5"/>
-          <path d="M50 20C66.5685 20 80 33.4315 80 50C80 66.5685 66.5685 80 50 80C33.4315 80 20 66.5685 20 50C20 33.4315 33.4315 20 50 20Z" stroke="currentColor" strokeWidth="0.5"/>
-          <path d="M65 50C65 58.2843 58.2843 65 50 65C41.7157 65 35 58.2843 35 50C35 41.7157 41.7157 35 50 35C58.2843 35 65 41.7157 65 50Z" stroke="currentColor" strokeWidth="0.5"/>
-          <path d="M50 5V95M5 50H95" stroke="currentColor" strokeWidth="0.3"/>
-        </svg>
-      </div>
-      
-      <div className="decorative-element absolute right-10 top-32 w-40 h-40 opacity-20 text-earth-700 animate-float">
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="0.8" />
-          <circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" strokeWidth="0.6" />
-          <circle cx="50" cy="50" r="25" fill="none" stroke="currentColor" strokeWidth="0.4" />
-          <path d="M50 5 L50 95 M5 50 L95 50 M15 15 L85 85 M15 85 L85 15" stroke="currentColor" strokeWidth="0.3" fill="none" />
-        </svg>
       </div>
       
       {/* Ethereal light rays */}
