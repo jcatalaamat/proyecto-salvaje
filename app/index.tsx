@@ -110,7 +110,7 @@ export default function Index() {
               </svg>
             </div>
             
-            <ProgramsSection />
+            {/* <ProgramsSection /> */}
             
             {/* Decorative divider */}
             <div className="relative h-20 overflow-hidden">
