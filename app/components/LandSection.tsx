@@ -77,47 +77,47 @@ const landFeatures = [
 // Image gallery items
 const galleryImages = [
   {
-    src: "/photos/IMG_0485.JPG",
+    src: "/photos/IMG_0485.jpg",
     alt: "Aerial view of the property showing forest and valleys",
     caption: "Aerial view showcasing the property's diverse ecosystems"
   },
   {
-    src: "/photos/IMG_0489.JPG",
+    src: "/photos/IMG_0489.jpg",
     alt: "Clear stream running through the property",
     caption: "One of three pristine streams flowing through the land"
   },
   {
-    src: "/photos/IMG_0491.JPG",
+    src: "/photos/IMG_0491.jpg",
     alt: "Mountain vista from property viewpoint",
     caption: "Panoramic mountain vista from one of our viewpoints"
   },
   {
-    src: "/photos/IMG_0495.JPG",
+    src: "/photos/IMG_0495.jpg",
     alt: "Fertile valleys with early permaculture design",
     caption: "Fertile valley being developed with permaculture principles"
   },
   {
-    src: "/photos/IMG_0484.JPG",
+    src: "/photos/IMG_0484.jpg",
     alt: "Natural landscape of the property",
     caption: "Natural beauty and biodiversity of the land"
   },
   {
-    src: "/photos/IMG_0486.JPG",
+    src: "/photos/IMG_0486.jpg",
     alt: "Lush vegetation and pristine environment",
     caption: "Lush vegetation and untouched natural spaces"
   },
   {
-    src: "/photos/5B939699-59CD-4238-938B-F1CDF01F8462.JPG",
+    src: "/photos/5B939699-59CD-4238-938B-F1CDF01F8462.jpg",
     alt: "Aerial view of the landscape",
     caption: "Aerial perspective showcasing the property's location and features"
   },
   {
-    src: "/photos/9D053D11-BEDB-49DA-9626-3256F60B3AAB.JPG",
+    src: "/photos/9D053D11-BEDB-49DA-9626-3256F60B3AAB.jpg",
     alt: "Scenic view of the property",
     caption: "Scenic view highlighting the natural beauty of the area"
   },
   {
-    src: "/photos/D55D941D-553E-4EAF-B84B-6173EDF65E4A.JPG",
+    src: "/photos/D55D941D-553E-4EAF-B84B-6173EDF65E4A.jpg",
     alt: "Expansive view of the land and surroundings",
     caption: "Expansive view capturing the land's natural features and surroundings"
   }
@@ -294,7 +294,7 @@ export default function LandSection() {
       <div 
         ref={parallaxRef}
         className="absolute inset-0 bg-cover bg-center opacity-15"
-        style={{ backgroundImage: 'url("/photos/IMG_0484.JPG")' }}
+        style={{ backgroundImage: 'url("/photos/IMG_0484.jpg")' }}
       />
       
       {/* Gradient overlay */}
@@ -330,7 +330,7 @@ export default function LandSection() {
           <div className="relative h-[500px] md:h-[600px] overflow-hidden">
             {/* Map base layer */}
             <div className="absolute inset-0 bg-cover bg-center opacity-30 z-0"
-              style={{ backgroundImage: 'url("/photos/IMG_0486.JPG")' }}>
+              style={{ backgroundImage: 'url("/photos/IMG_0486.jpg")' }}>
             </div>
             
             {/* Drone image carousel */}
