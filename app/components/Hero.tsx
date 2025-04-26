@@ -83,10 +83,36 @@ export default function Hero() {
 
   // Get video styling based on screen width
   const getVideoStyle = () => {
-    // For mobile devices - scale more aggressively
+    // For extra small mobile devices
+    if (windowWidth < 320) {
+      return { 
+        transform: 'scale(8) translateY(0%)',
+        objectFit: 'cover',
+        objectPosition: 'center 30%',
+        background: '#000'
+      };
+    }
+    if (windowWidth < 390) {
+      return { 
+        transform: 'scale(4) translateY(0%)',
+        objectFit: 'cover',
+        objectPosition: 'center 30%',
+        background: '#000'
+      };
+    }
+    // For smaller mobile devices
     if (windowWidth < 480) {
       return { 
         transform: 'scale(3.6) translateY(1%)',
+        objectFit: 'cover',
+        objectPosition: 'center 30%',
+        background: '#000'
+      };
+    }
+    // For medium-sized mobile devices (in-between)
+    if (windowWidth < 590) {
+      return { 
+        transform: 'scale(3) translateY(1.5%)',
         objectFit: 'cover',
         objectPosition: 'center 30%',
         background: '#000'
