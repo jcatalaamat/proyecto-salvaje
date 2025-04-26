@@ -86,7 +86,7 @@ export default function Hero() {
     // For mobile devices - scale more aggressively
     if (windowWidth < 480) {
       return { 
-        transform: 'scale(3.5) translateY(2%)',
+        transform: 'scale(3.6) translateY(1%)',
         objectFit: 'cover',
         objectPosition: 'center 30%',
         background: '#000'
