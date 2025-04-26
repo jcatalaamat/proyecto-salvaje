@@ -325,7 +325,7 @@ export default function IndigenousStewardshipSection() {
         {/* Added image with natural elements */}
         <div className="mt-16 text-center" ref={imageRef}>
           <div className="inline-block relative">
-            <div className="w-full md:w-[80%] max-w-2xl mx-auto h-[300px] bg-[url('/images/indigenous-ceremony.jpg')] bg-cover bg-center rounded-lg shadow-lg overflow-hidden">
+            <div className="w-full md:w-[80%] max-w-2xl mx-auto h-[300px] bg-[url('/photos/D55D941D-553E-4EAF-B84B-6173EDF65E4A.JPG')] bg-cover bg-center rounded-lg shadow-lg overflow-hidden">
               <div className="absolute inset-0 bg-earth-900/20"></div>
             </div>
             <div className="absolute -bottom-6 -right-6 w-24 h-24 text-earth-600 opacity-70">
