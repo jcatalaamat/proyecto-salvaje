@@ -142,11 +142,11 @@ export default function CommunitySection() {
   const timelineRef = useRef<HTMLDivElement>(null);
   const daoRef = useRef<HTMLDivElement>(null);
   
-  // Lower the threshold for mobile to make content more visible
+  // Using Framer Motion's useInView hook with lower threshold for better mobile visibility
   const isInView = useInView(sectionRef, { 
     once: false, 
-    amount: 0.05, // Reduced threshold - only need 5% in view to trigger
-    margin: "0px 0px -20% 0px" // Negative bottom margin to trigger earlier
+    amount: 0.02, // Very low threshold - only need 2% in view to trigger
+    margin: "0px 0px -25% 0px" // Larger negative bottom margin to trigger earlier
   });
   
   const { scrollYProgress } = useScroll({
@@ -167,19 +167,19 @@ export default function CommunitySection() {
     const isMobile = window.innerWidth < 768;
     
     // Adjust the start position for mobile to trigger animations earlier
-    const startPosition = isMobile ? "top 90%" : "top 75%";
+    const startPosition = isMobile ? "top 95%" : "top 75%";
     
     // Animate values cards with adjusted trigger
     if (valuesRef.current) {
       const valueCards = valuesRef.current.querySelectorAll('.value-card');
       gsap.fromTo(
         valueCards,
-        { y: isMobile ? 40 : 80, opacity: 0 },
+        { y: isMobile ? 30 : 80, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          stagger: isMobile ? 0.1 : 0.15,
-          duration: isMobile ? 0.5 : 0.7,
+          stagger: isMobile ? 0.08 : 0.15,
+          duration: isMobile ? 0.4 : 0.7,
           ease: "power2.out",
           scrollTrigger: {
             trigger: valuesRef.current,
@@ -195,12 +195,12 @@ export default function CommunitySection() {
       const governanceItems = governanceRef.current.querySelectorAll('.governance-item');
       gsap.fromTo(
         governanceItems,
-        { x: isMobile ? -25 : -50, opacity: 0 },
+        { x: isMobile ? -20 : -50, opacity: 0 },
         {
           x: 0,
           opacity: 1,
-          stagger: isMobile ? 0.1 : 0.2,
-          duration: isMobile ? 0.6 : 0.8,
+          stagger: isMobile ? 0.08 : 0.2,
+          duration: isMobile ? 0.5 : 0.8,
           ease: "power3.out",
           scrollTrigger: {
             trigger: governanceRef.current,
@@ -222,7 +222,7 @@ export default function CommunitySection() {
           { scaleX: 0 },
           {
             scaleX: 1,
-            duration: isMobile ? 1 : 1.5,
+            duration: isMobile ? 0.8 : 1.5,
             ease: "power2.inOut",
             scrollTrigger: {
               trigger: timelineRef.current,
@@ -235,12 +235,12 @@ export default function CommunitySection() {
       
       gsap.fromTo(
         timelineItems,
-        { y: isMobile ? 30 : 50, opacity: 0 },
+        { y: isMobile ? 25 : 50, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          stagger: isMobile ? 0.15 : 0.25,
-          duration: isMobile ? 0.6 : 0.8,
+          stagger: isMobile ? 0.1 : 0.25,
+          duration: isMobile ? 0.5 : 0.8,
           ease: "power2.out",
           scrollTrigger: {
             trigger: timelineRef.current,
@@ -256,12 +256,12 @@ export default function CommunitySection() {
       const elements = daoRef.current.querySelectorAll('.dao-item');
       gsap.fromTo(
         elements,
-        { y: isMobile ? 20 : 30, opacity: 0 },
+        { y: isMobile ? 15 : 30, opacity: 0 },
         {
           y: 0,
           opacity: 1,
-          stagger: isMobile ? 0.1 : 0.15,
-          duration: isMobile ? 0.5 : 0.7,
+          stagger: isMobile ? 0.08 : 0.15,
+          duration: isMobile ? 0.4 : 0.7,
           ease: "power2.out",
           scrollTrigger: {
             trigger: daoRef.current,
@@ -277,7 +277,7 @@ export default function CommunitySection() {
     <section 
       ref={sectionRef} 
       id="community"
-      className="py-16 md:py-32 relative overflow-hidden"
+      className="py-12 md:py-32 relative overflow-hidden"
     >
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-earth-50/40 to-white -z-10"></div>
@@ -292,8 +292,8 @@ export default function CommunitySection() {
         ></motion.div>
       </div>
       
-      {/* Sacred geometry light pattern */}
-      <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-[0.03] pointer-events-none">
+      {/* Sacred geometry light pattern - smaller on mobile */}
+      <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[800px] h-[300px] md:h-[800px] opacity-[0.03] pointer-events-none">
         <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
           <circle cx="400" cy="400" r="400" fill="none" stroke="#555" strokeWidth="1" />
           <circle cx="400" cy="400" r="300" fill="none" stroke="#555" strokeWidth="1" />
@@ -307,27 +307,30 @@ export default function CommunitySection() {
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-        <div className="mb-16 max-w-3xl mx-auto text-center">
+        <div className="mb-12 md:mb-16 max-w-3xl mx-auto text-center">
           <motion.span 
-            className="inline-block text-earth-600 uppercase tracking-[0.25em] text-sm font-medium mb-6"
+            className="inline-block text-earth-600 uppercase tracking-[0.25em] text-sm font-medium mb-4 md:mb-6"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }} // Always visible without isInView condition
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.1 }} // Very low threshold
             transition={{ duration: 0.6 }}
           >
             Living Together
           </motion.span>
           <motion.h2 
-            className="section-heading text-2xl sm:text-3xl md:text-4xl mb-8"
+            className="section-heading text-2xl sm:text-3xl md:text-4xl mb-6 md:mb-8"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }} // Always visible without isInView condition
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             Our Community Structure
           </motion.h2>
           <motion.p 
-            className="text-lg md:text-xl text-earth-800 leading-relaxed font-light"
+            className="text-base md:text-xl text-earth-800 leading-relaxed font-light"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }} // Always visible without isInView condition
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             We're looking to offer shelter for those dedicated to supporting the collective and fighting for truth & dignity. Our governance systems draw from ancient wisdom and modern organizational design to create a structure that's both resilient and adaptive.
@@ -386,7 +389,7 @@ export default function CommunitySection() {
             <div className="timeline-line hidden md:block absolute top-10 left-0 right-0 h-1 bg-earth-200 transform origin-left"></div>
             
             {/* Timeline steps */}
-            <div className="relative grid grid-cols-1 md:grid-cols-4 gap-8 md:pt-16">
+            <div className="relative grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 md:pt-16">
               {timelinePhases.map((phase, index) => (
                 <div key={phase.id} className="timeline-item relative">
                   {/* Phase circle - only visible on md screens and up */}
@@ -397,7 +400,7 @@ export default function CommunitySection() {
                   </div>
                   
                   {/* Phase content */}
-                  <div className="bg-white rounded-xl shadow-md p-6 border border-earth-100 h-full hover:shadow-lg transition-all duration-300">
+                  <div className="bg-white rounded-xl shadow-md p-5 md:p-6 border border-earth-100 h-full hover:shadow-lg transition-all duration-300">
                     {/* Mobile view icon and phase */}
                     <div className="flex items-center mb-3 md:hidden">
                       <div className="w-8 h-8 mr-3 rounded-full bg-white border-2 border-earth-400 flex items-center justify-center flex-shrink-0">
@@ -411,7 +414,7 @@ export default function CommunitySection() {
                     {/* Desktop date - hidden on mobile */}
                     <div className="text-earth-500 text-sm font-medium mb-2 hidden md:block">{phase.date}</div>
                     
-                    <h4 className="text-lg md:text-xl font-serif text-earth-900 mb-3">{phase.title}</h4>
+                    <h4 className="text-base md:text-lg lg:text-xl font-serif text-earth-900 mb-3">{phase.title}</h4>
                     <p className="text-earth-700 text-sm">{phase.description}</p>
                   </div>
                 </div>
@@ -423,21 +426,21 @@ export default function CommunitySection() {
         {/* Governance Structure */}
         <div>
           <motion.h3 
-            className="text-xl sm:text-2xl font-serif text-earth-900 mb-12 md:mb-16 text-center"
+            className="text-xl sm:text-2xl font-serif text-earth-900 mb-8 md:mb-12 text-center"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }} // Use whileInView instead of animate + isInView
-            viewport={{ once: false, amount: 0.1 }} // Very low threshold to make it visible sooner
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             Our Governance Structure
           </motion.h3>
           
-          <div ref={governanceRef} className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 md:mb-24">
+          <div ref={governanceRef} className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-24">
             {governanceStructures.map((structure, index) => (
               <div key={structure.title} className="governance-item">
                 <div className={`rounded-xl shadow-md overflow-hidden ${structure.color} border ${structure.borderColor}`}>
-                  <div className={`p-6 ${structure.textColor}`}>
-                    <h4 className="text-lg md:text-xl font-serif mb-3">{structure.title}</h4>
+                  <div className={`p-5 md:p-6 ${structure.textColor}`}>
+                    <h4 className="text-base md:text-lg lg:text-xl font-serif mb-3">{structure.title}</h4>
                     <p className={`${structure.textColor} opacity-80 text-sm`}>{structure.description}</p>
                   </div>
                 </div>
@@ -451,25 +454,25 @@ export default function CommunitySection() {
           <motion.h3 
             className="text-xl sm:text-2xl font-serif text-earth-900 mb-6 text-center"
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }} // Use whileInView instead of animate + isInView
-            viewport={{ once: false, amount: 0.1 }} // Very low threshold to make it visible sooner
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             Structure Rooted in Trust & Transparency
           </motion.h3>
           
-          <div className="max-w-4xl mx-auto mt-10">
+          <div className="max-w-4xl mx-auto mt-8 md:mt-10">
             <div className="dao-item sacred-callout text-center">
-              <p className="font-serif text-lg md:text-xl text-earth-800 italic">
+              <p className="font-serif text-base md:text-lg lg:text-xl text-earth-800 italic">
                 "Using blockchain technology to provide full transparency around decision-making and resource flow — from investors to participants."
               </p>
             </div>
             
-            <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="dao-item bg-white p-6 md:p-8 rounded-xl shadow-lg border border-earth-100">
-                <h4 className="text-lg md:text-xl font-serif text-earth-900 mb-4">Decentralized Governance</h4>
-                <p className="text-earth-700 mb-4">Our DAO (Decentralized Autonomous Organization) enables transparent voting, resource allocation, and decision-making for all community members.</p>
-                <ul className="space-y-2 text-earth-700">
+            <div className="mt-10 md:mt-16 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+              <div className="dao-item bg-white p-5 md:p-8 rounded-xl shadow-lg border border-earth-100">
+                <h4 className="text-base md:text-lg lg:text-xl font-serif text-earth-900 mb-4">Decentralized Governance</h4>
+                <p className="text-earth-700 mb-4 text-sm md:text-base">Our DAO (Decentralized Autonomous Organization) enables transparent voting, resource allocation, and decision-making for all community members.</p>
+                <ul className="space-y-2 text-earth-700 text-sm md:text-base">
                   <li className="flex items-start">
                     <span className="text-forest-500 mr-2">•</span>
                     <span>Transparent voting mechanisms</span>
@@ -485,10 +488,10 @@ export default function CommunitySection() {
                 </ul>
               </div>
               
-              <div className="dao-item bg-white p-6 md:p-8 rounded-xl shadow-lg border border-earth-100">
-                <h4 className="text-lg md:text-xl font-serif text-earth-900 mb-4">Contribution Paths</h4>
-                <p className="text-earth-700 mb-4">Multiple ways to participate in and contribute to our community, with varying levels of commitment and involvement.</p>
-                <ul className="space-y-2 text-earth-700">
+              <div className="dao-item bg-white p-5 md:p-8 rounded-xl shadow-lg border border-earth-100">
+                <h4 className="text-base md:text-lg lg:text-xl font-serif text-earth-900 mb-4">Contribution Paths</h4>
+                <p className="text-earth-700 mb-4 text-sm md:text-base">Multiple ways to participate in and contribute to our community, with varying levels of commitment and involvement.</p>
+                <ul className="space-y-2 text-earth-700 text-sm md:text-base">
                   <li className="flex items-start">
                     <span className="text-forest-500 mr-2">•</span>
                     <span>Core founding members</span>
@@ -509,8 +512,8 @@ export default function CommunitySection() {
               </div>
             </div>
             
-            <div className="dao-item mt-12 md:mt-16 text-center">
-              <p className="text-earth-700 text-lg">
+            <div className="dao-item mt-10 md:mt-16 text-center">
+              <p className="text-earth-700 text-base md:text-lg">
                 Together, they will form the Council of Founding Members.
               </p>
             </div>
@@ -519,17 +522,17 @@ export default function CommunitySection() {
         
         {/* Community Call to Action */}
         <motion.div 
-          className="text-center mt-12 md:mt-20"
+          className="text-center mt-10 md:mt-20"
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }} // Use whileInView instead of animate + isInView
-          viewport={{ once: false, amount: 0.1 }} // Very low threshold to make it visible sooner
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.1 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
           <a 
             href="mailto:info@proyectosalvaje.com" 
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-6 md:px-8 py-3 bg-earth-600 text-white rounded-full hover:bg-earth-700 transition-colors shadow-md hover:shadow-lg"
+            className="inline-block px-5 md:px-8 py-2.5 md:py-3 bg-earth-600 text-white rounded-full hover:bg-earth-700 transition-colors shadow-md hover:shadow-lg text-sm md:text-base"
           >
             Join Our Community
           </a>

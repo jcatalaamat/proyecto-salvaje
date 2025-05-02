@@ -226,9 +226,9 @@ export default function VisionSection() {
 
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <span className="inline-block text-earth-600 uppercase tracking-[0.25em] text-sm font-medium mb-4">Our Vision</span>
-          <h2 ref={titleRef} className="section-heading">A Regenerative Vision for Sovereign Living</h2>
-          <p ref={introRef} className="text-lg md:text-xl text-earth-800 max-w-3xl mx-auto leading-relaxed">
+          <span className="text-overline inline-block mb-4">Our Vision</span>
+          <h2 ref={titleRef} className="section-heading balance-text">A Regenerative Vision for Sovereign Living</h2>
+          <p ref={introRef} className="text-lead max-w-3xl mx-auto">
             Creation of an intentional regenerative community dedicated to protecting human integrity and sovereign birthrights: freedom, bodily autonomy, spiritual self-determination, and the right to live in harmony with nature.
           </p>
         </div>
@@ -248,7 +248,7 @@ export default function VisionSection() {
             </svg>
           </div>
           
-          <p className="font-serif text-xl md:text-2xl text-earth-900 max-w-2xl mx-auto">
+          <p className="subtitle-serif text-earth-900 max-w-2xl mx-auto">
             A regenerative, heart-led social project dedicated to future generations and the defense of human integrity. A community made to radiate outward and plant seeds of change, rather than being an isolated bubble.
           </p>
         </div>
@@ -272,11 +272,11 @@ export default function VisionSection() {
                 </div>
               </div>
               
-              <h3 className="text-xl md:text-2xl font-serif font-medium text-earth-900 mb-4 text-center">
+              <h3 className="title-serif mb-4 text-center">
                 {pillar.title}
               </h3>
               
-              <p className="text-earth-700 leading-relaxed text-center">
+              <p className="text-body text-center">
                 {pillar.description}
               </p>
             </motion.div>

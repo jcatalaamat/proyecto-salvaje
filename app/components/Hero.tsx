@@ -183,19 +183,19 @@ export default function Hero() {
       </div>
       
       <div className="container mx-auto px-6 relative z-10 pt-28 md:pt-32 pb-24 min-h-screen flex flex-col justify-center">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="mb-6"
           >
-            <span className="text-earth-300 uppercase tracking-[0.2em] md:tracking-[0.3em] text-sm md:text-base font-medium">Regenerative Village School</span>
+            <span className="text-overline">Regenerative Village School</span>
           </motion.div>
           
           <h1 
             ref={titleRef}
-            className="font-serif text-[22px] md:text-5xl text-earth-100 mb-6 leading-snug md:leading-tight tracking-tight"
+            className="title-elegant balance-text mb-6"
             style={{ wordBreak: 'normal', overflowWrap: 'break-word', hyphens: 'manual', textShadow: '0 1px 3px rgba(0,0,0,0.3)' }}
           >
             Creation of an intentional regenerative community for human integrity and sovereign living
@@ -205,7 +205,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="text-base md:text-lg text-earth-200 max-w-md mx-auto mb-8 font-serif italic font-light"
+            className="subtitle-serif max-w-2xl mx-auto mb-8"
             style={{ textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}
           >
             A healing village, real-life school, and educational center dedicated to protecting freedom, bodily autonomy, and living in harmony with nature.

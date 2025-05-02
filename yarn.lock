@@ -2106,6 +2106,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/lora@npm:^5.2.5":
+  version: 5.2.5
+  resolution: "@fontsource/lora@npm:5.2.5"
+  checksum: 10/95258dc3fd6982605aa332d12e374b74a075fbf9126d7954a926d92060d7e0663d37638d3e17eb450a87b420129e7124b331c9120c16ceef707dcf49a699f338
+  languageName: node
+  linkType: hard
+
+"@fontsource/playfair-display@npm:^5.2.5":
+  version: 5.2.5
+  resolution: "@fontsource/playfair-display@npm:5.2.5"
+  checksum: 10/051fe473ab08da2f8733e54ac1be5c4318dd528bb55f7cfe9fd117e223362384a339f245f610f3838b34641beb216ca08d535bff13d7f2216b1a176a6143b98a
+  languageName: node
+  linkType: hard
+
 "@hapi/hoek@npm:^9.0.0, @hapi/hoek@npm:^9.3.0":
   version: 9.3.0
   resolution: "@hapi/hoek@npm:9.3.0"
@@ -9889,6 +9903,8 @@ __metadata:
   dependencies:
     "@fontsource/cormorant-garamond": "npm:^5.2.6"
     "@fontsource/inter": "npm:^5.2.5"
+    "@fontsource/lora": "npm:^5.2.5"
+    "@fontsource/playfair-display": "npm:^5.2.5"
     "@react-native-community/cli": "npm:15.1.3"
     "@react-navigation/core": "npm:^7.8.5"
     "@react-navigation/elements": "npm:^2.3.8"

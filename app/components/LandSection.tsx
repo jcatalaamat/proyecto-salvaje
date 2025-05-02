@@ -314,12 +314,12 @@ export default function LandSection() {
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Header section */}
         <div ref={textRef} className="max-w-3xl mx-auto text-center mb-16">
-          <span className="text-earth-600 uppercase tracking-[0.25em] text-sm font-medium mb-4 inline-block animate-gsap">The Sacred Land</span>
-          <h2 className="section-heading animate-gsap">The Land Calling Us Home</h2>
-          <p className="text-lg md:text-xl text-earth-800 max-w-3xl mx-auto leading-relaxed mb-6 animate-gsap">
+          <span className="text-overline inline-block mb-4">The Sacred Land</span>
+          <h2 className="section-heading animate-gsap balance-text">The Land Calling Us Home</h2>
+          <p className="text-lead max-w-3xl mx-auto mb-6 animate-gsap">
             The project is being birthed in Mexico, a country that upholds a very powerful energy of social resistance, indigenous rights, and integrity, and that holds weight on the global political scene for defending minorities.
           </p>
-          <p className="text-lg md:text-xl text-earth-800 max-w-3xl mx-auto leading-relaxed animate-gsap">
+          <p className="text-lead max-w-3xl mx-auto animate-gsap">
             This land is surrounded by agricultural fields with old trees and rich soil. It's an area rich in culture and history, with the presence of ocean, lagoon, and mangroves — a place that already hosts various collective initiatives, healing centers, and land regeneration projects.
           </p>
         </div>
@@ -348,7 +348,7 @@ export default function LandSection() {
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
-                    <p className="text-white text-lg font-serif">{image.caption}</p>
+                    <p className="text-caption text-white">{image.caption}</p>
                   </div>
                 </div>
               ))}
@@ -405,7 +405,7 @@ export default function LandSection() {
             
             {/* Quote overlay */}
             <div className="absolute top-8 left-8 right-8 z-20 md:max-w-md bg-black/30 backdrop-blur-sm p-6 rounded-lg border border-white/10">
-              <p className="text-white text-lg md:text-xl italic font-serif">
+              <p className="subtitle-serif text-white balance-text">
                 "The land is nestled in front of a natural reserve… offering privacy and deep peace — being both protected and connected."
               </p>
             </div>
@@ -424,12 +424,12 @@ export default function LandSection() {
               variants={fadeInUp}
               className="bg-earth-50/80 p-8 rounded-lg border-t-4 border-earth-400/30 shadow-md"
             >
-              <h3 className="text-xl font-serif text-earth-800 mb-4">{column.title}</h3>
+              <h3 className="title-serif text-xl mb-4">{column.title}</h3>
               <ul className="space-y-2">
                 {column.details.map((detail, idx) => (
                   <li key={idx} className="flex items-start">
                     <span className="text-earth-500 mr-2 mt-1">•</span>
-                    <span className="text-earth-700">{detail}</span>
+                    <span className="text-body">{detail}</span>
                   </li>
                 ))}
               </ul>
@@ -453,8 +453,8 @@ export default function LandSection() {
                 <div className="w-16 h-16 mb-4 text-earth-600 transform transition-transform duration-500 group-hover:scale-110 group-hover:text-earth-700">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-serif text-earth-900 mb-2">{feature.title}</h3>
-                <p className="text-earth-700">{feature.description}</p>
+                <h3 className="title-serif text-xl mb-2">{feature.title}</h3>
+                <p className="text-body">{feature.description}</p>
               </motion.div>
             ))}
           </div>
