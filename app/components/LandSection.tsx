@@ -15,62 +15,19 @@ if (typeof window !== 'undefined') {
 const landFeatures = [
   {
     title: "Ocean & Mangroves",
-    description: "Located on the coast of Oaxaca where the Sierra Madre meets the Pacific Ocean, with proximity to lagoons and mangroves.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-        {/* Simple ocean waves */}
-        <path d="M4 12c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0" />
-        <path d="M4 16c2 1.5 4 1.5 6 0s4-1.5 6 0 4 1.5 6 0" />
-        {/* Simple tree/mangrove */}
-        <circle cx="8" cy="6" r="2" />
-        <line x1="8" y1="8" x2="8" y2="12" />
-        <circle cx="16" cy="7" r="2" />
-        <line x1="16" y1="9" x2="16" y2="12" />
-      </svg>
-    )
+    description: "Located on the coast of Oaxaca where the Sierra Madre meets the Pacific Ocean, with proximity to lagoons and mangroves."
   },
   {
     title: "Natural Reserve",
-    description: "Nestled in front of a natural reserve with unique topography that makes it perfect for this project.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-        {/* Simple mountains */}
-        <path d="M8 18L12 9 16 18" />
-        <path d="M3 18L7 10 11 18" />
-        <path d="M13 18L17 10 21 18" />
-        {/* Simple sun */}
-        <circle cx="19" cy="5" r="2" />
-        <line x1="19" y1="1" x2="19" y2="3" />
-        <line x1="19" y1="7" x2="19" y2="9" />
-        <line x1="15" y1="5" x2="17" y2="5" />
-        <line x1="21" y1="5" x2="23" y2="5" />
-      </svg>
-    )
+    description: "Nestled in front of a natural reserve with unique topography that makes it perfect for this project."
   },
   {
     title: "Water Access",
-    description: "Access to water, flat areas for permaculture, and hills offering open views, perfect for sustainable development.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-        {/* Water drop */}
-        <path d="M12 2L8 10C6 14 8 18 12 18C16 18 18 14 16 10L12 2Z" />
-        {/* Horizontal land */}
-        <line x1="3" y1="22" x2="21" y2="22" />
-        {/* Plant */}
-        <line x1="12" y1="18" x2="12" y2="22" />
-        <path d="M9 20L15 20" />
-      </svg>
-    )
+    description: "Access to water, flat areas for permaculture, and hills offering open views, perfect for sustainable development."
   },
   {
     title: "Privacy & Connection",
-    description: "Spread along small pathways that provide privacy, with a sense of deep peace — being both protected and connected.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
-        {/* Home */}
-        <path d="M3 12L5 10M5 10L12 3L19 10M5 10V20C5 20.5523 5.44772 21 6 21H9M19 10L21 12M19 10V20C19 20.5523 18.5523 21 18 21H15M9 21C9.55228 21 10 20.5523 10 20V16C10 15.4477 10.4477 15 11 15H13C13.5523 15 14 15.4477 14 16V20C14 20.5523 14.4477 21 15 21M9 21H15" />
-      </svg>
-    )
+    description: "Spread along small pathways that provide privacy, with a sense of deep peace — being both protected and connected."
   }
 ];
 
@@ -290,36 +247,16 @@ export default function LandSection() {
       id="land"
       className="py-32 lg:py-40 relative overflow-hidden"
     >
-      {/* Parallax background with gradient overlay */}
-      <div 
-        ref={parallaxRef}
-        className="absolute inset-0 bg-cover bg-center opacity-15"
-        style={{ backgroundImage: 'url("/photos/IMG_0484.jpg")' }}
-      />
-      
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white pointer-events-none"></div>
-      
-      {/* Organic background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -left-64 -bottom-32 w-[800px] h-[800px] rounded-full bg-earth-50/20 mix-blend-multiply blur-3xl"></div>
-        <div className="absolute -right-32 top-1/3 w-[600px] h-[600px] rounded-full bg-forest-50/30 mix-blend-multiply blur-3xl"></div>
-      </div>
-      
-      {/* Decorative elements */}
-      <div className="absolute top-32 right-[15%] w-24 h-24 border border-earth-300/20 rounded-full opacity-60 pointer-events-none"></div>
-      <div className="absolute bottom-40 left-[5%] w-16 h-16 border border-earth-400/20 rounded-full opacity-70 pointer-events-none"></div>
-      <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 w-4/5 h-20 bg-gradient-radial from-earth-50/30 to-transparent opacity-60"></div>
       
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         {/* Header section */}
         <div ref={textRef} className="max-w-3xl mx-auto text-center mb-16">
-          <span className="text-earth-600 uppercase tracking-[0.25em] text-sm font-medium mb-4 inline-block animate-gsap">The Sacred Land</span>
-          <h2 className="section-heading animate-gsap">The Land Calling Us Home</h2>
-          <p className="text-lg md:text-xl text-earth-800 max-w-3xl mx-auto leading-relaxed mb-6 animate-gsap">
+          <span className="text-black-600 uppercase tracking-wider text-sm font-semibold mb-4 inline-block animate-gsap">The Sacred Land</span>
+          <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6 animate-gsap">The Land Calling Us Home</h2>
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-6 animate-gsap">
             The project is being birthed in Mexico, a country that upholds a very powerful energy of social resistance, indigenous rights, and integrity, and that holds weight on the global political scene for defending minorities.
           </p>
-          <p className="text-lg md:text-xl text-earth-800 max-w-3xl mx-auto leading-relaxed animate-gsap">
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed animate-gsap">
             This land is surrounded by agricultural fields with old trees and rich soil. It's an area rich in culture and history, with the presence of ocean, lagoon, and mangroves — a place that already hosts various collective initiatives, healing centers, and land regeneration projects.
           </p>
         </div>
@@ -422,14 +359,14 @@ export default function LandSection() {
               whileInView="visible"
               viewport={{ once: true, margin: "-100px" }}
               variants={fadeInUp}
-              className="bg-earth-50/80 p-8 rounded-lg border-t-4 border-earth-400/30 shadow-md"
+              className="p-8 rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300"
             >
-              <h3 className="text-xl font-serif text-earth-800 mb-4">{column.title}</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{column.title}</h3>
               <ul className="space-y-2">
                 {column.details.map((detail, idx) => (
                   <li key={idx} className="flex items-start">
-                    <span className="text-earth-500 mr-2 mt-1">•</span>
-                    <span className="text-earth-700">{detail}</span>
+                    <span className="text-black-600 mr-2 mt-1">•</span>
+                    <span className="text-gray-600">{detail}</span>
                   </li>
                 ))}
               </ul>
@@ -448,13 +385,10 @@ export default function LandSection() {
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
                 variants={fadeInUp}
-                className="p-6 bg-gradient-to-br from-earth-50 to-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group border border-earth-100"
+                className="p-6 rounded-2xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2"
               >
-                <div className="w-16 h-16 mb-4 text-earth-600 transform transition-transform duration-500 group-hover:scale-110 group-hover:text-earth-700">
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-serif text-earth-900 mb-2">{feature.title}</h3>
-                <p className="text-earth-700">{feature.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-black-600 transition-colors duration-300">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
               </motion.div>
             ))}
           </div>

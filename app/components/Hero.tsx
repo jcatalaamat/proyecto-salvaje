@@ -161,7 +161,7 @@ export default function Hero() {
             ></iframe>
           </div>
           {/* Enhanced overlay for better legibility and ambiance on mobile */}
-          <div className="absolute inset-0 bg-gradient-to-b from-earth-900/30 via-earth-900/20 to-earth-900/40 md:from-earth-900/20 md:via-transparent md:to-earth-900/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-900/30 via-gray-900/20 to-gray-900/40 md:from-gray-900/20 md:via-transparent md:to-gray-900/30"></div>
           <div className="absolute inset-0 bg-[url('/images/texture-bg.jpg')] bg-cover bg-center bg-no-repeat mix-blend-overlay opacity-10"></div>
           <div className="absolute inset-0 backdrop-blur-[0px]"></div>
         </div>
@@ -178,8 +178,8 @@ export default function Hero() {
       
       {/* Ethereal light rays */}
       <div className="absolute inset-0 opacity-40 pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-[150px] h-[60vh] bg-gradient-to-b from-earth-100/80 to-transparent transform -rotate-15 blur-lg"></div>
-        <div className="absolute top-20 right-1/3 w-[120px] h-[40vh] bg-gradient-to-b from-earth-100/60 to-transparent transform rotate-12 blur-lg"></div>
+        <div className="absolute top-0 left-1/4 w-[150px] h-[60vh] bg-gradient-to-b from-white/80 to-transparent transform -rotate-15 blur-lg"></div>
+        <div className="absolute top-20 right-1/3 w-[120px] h-[40vh] bg-gradient-to-b from-white/60 to-transparent transform rotate-12 blur-lg"></div>
       </div>
       
       <div className="container mx-auto px-6 relative z-10 pt-28 md:pt-32 pb-24 min-h-screen flex flex-col justify-center">
@@ -190,12 +190,12 @@ export default function Hero() {
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className="mb-6"
           >
-            <span className="text-earth-300 uppercase tracking-[0.2em] md:tracking-[0.3em] text-sm md:text-base font-medium">Regenerative Village School</span>
+            <span className="text-gray-300 uppercase tracking-[0.2em] md:tracking-[0.3em] text-sm md:text-base font-medium">Regenerative Village School</span>
           </motion.div>
           
           <h1 
             ref={titleRef}
-            className="font-serif text-[22px] md:text-5xl text-earth-100 mb-6 leading-snug md:leading-tight tracking-tight"
+            className="font-serif text-[22px] md:text-5xl text-white mb-6 leading-snug md:leading-tight tracking-tight"
             style={{ wordBreak: 'normal', overflowWrap: 'break-word', hyphens: 'manual', textShadow: '0 1px 3px rgba(0,0,0,0.3)' }}
           >
             Creation of an intentional regenerative community for human integrity and sovereign living
@@ -205,7 +205,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="text-base md:text-lg text-earth-200 max-w-md mx-auto mb-8 font-serif italic font-light"
+            className="text-base md:text-lg text-gray-200 max-w-md mx-auto mb-8 font-serif italic font-light"
             style={{ textShadow: '0 1px 2px rgba(0,0,0,0.3)' }}
           >
             A healing village, real-life school, and educational center dedicated to protecting freedom, bodily autonomy, and living in harmony with nature.
@@ -221,12 +221,12 @@ export default function Hero() {
               href="mailto:info@proyectosalvaje.com" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="hero-button btn-sacred-invite group relative overflow-hidden w-full md:w-auto border border-earth-500 text-earth-900 font-semibold px-6 py-3 rounded-full bg-earth-200/80 hover:bg-earth-200"
+              className="hero-button btn-sacred-invite group relative overflow-hidden w-full md:w-auto border border-white text-gray-900 font-semibold px-6 py-3 rounded-full bg-white/90 hover:bg-white"
             >
               <span className="relative z-10">Join Our Community</span>
-              <span className="absolute inset-0 bg-earth-300 opacity-0 group-hover:opacity-30 transition-opacity duration-700 rounded-full transform group-hover:scale-110"></span>
+              <span className="absolute inset-0 bg-gray-200 opacity-0 group-hover:opacity-30 transition-opacity duration-700 rounded-full transform group-hover:scale-110"></span>
             </a>
-            <a href="#about" className="hero-button btn-secondary group w-full md:w-auto border border-earth-300 text-earth-100 font-medium px-6 py-3 rounded-full bg-transparent hover:bg-earth-900/30">
+            <a href="#about" className="hero-button btn-secondary group w-full md:w-auto border border-white text-white font-medium px-6 py-3 rounded-full bg-transparent hover:bg-gray-900/30">
               <span>Explore Our Vision</span>
               <svg className="inline-block ml-2 w-4 h-4 transition-transform duration-500 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15 5L21 12M21 12L15 19M21 12H3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -249,9 +249,9 @@ export default function Hero() {
           }}
           className="absolute bottom-12 left-0 right-0 mx-auto text-center w-full"
         >
-          <span className="block text-earth-300 text-sm tracking-wider mb-2 uppercase">Begin the Journey</span>
-          <div className="w-7 h-12 border-2 border-earth-300 rounded-full flex justify-center pt-2 mx-auto">
-            <div className="w-1.5 h-1.5 bg-earth-400 rounded-full animate-bounce"></div>
+          <span className="block text-gray-300 text-sm tracking-wider mb-2 uppercase">Begin the Journey</span>
+          <div className="w-7 h-12 border-2 border-gray-300 rounded-full flex justify-center pt-2 mx-auto">
+            <div className="w-1.5 h-1.5 bg-gray-400 rounded-full animate-bounce"></div>
           </div>
         </motion.div>
       </div>

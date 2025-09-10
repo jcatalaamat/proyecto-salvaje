@@ -15,89 +15,22 @@ const visionPillars = [
   {
     title: "Community-Driven Growth",
     description: "Stepping out of the over-capitalization of the wellness industry by prioritizing community-driven growth, equitable access, and mutual support over profit.",
-    symbol: (
-      <svg width="80" height="80" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-drawn">
-        <circle cx="32" cy="32" r="20" stroke="currentColor" strokeWidth="1" strokeDasharray="1 2" />
-        <path d="M32 12V52" stroke="currentColor" strokeWidth="1" />
-        <path d="M22 22L42 42" stroke="currentColor" strokeWidth="1" />
-        <path d="M22 42L42 22" stroke="currentColor" strokeWidth="1" />
-        <circle cx="32" cy="32" r="5" fill="currentColor" fillOpacity="0.2" />
-      </svg>
-    ),
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2L14.5 9H22L16 13.5L18.5 20.5L12 16L5.5 20.5L8 13.5L2 9H9.5L12 2Z" fill="currentColor" fillOpacity="0.3" stroke="currentColor" strokeWidth="1" />
-      </svg>
-    ),
-    color: "bg-gradient-to-br from-earth-100 to-earth-200 border-l-4 border-earth-600",
-    texture: "bg-[url('/images/textures/handmade-paper.png')]"
+    color: "border border-gray-200 shadow-lg hover:shadow-xl"
   },
   {
     title: "Human-Centered Healing",
     description: "A third way focused on the human factor — on how to heal and support each other as we live in reciprocity with the Earth, grounded in dignity and remembrance of the sacred.",
-    symbol: (
-      <svg width="80" height="80" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-drawn">
-        <circle cx="32" cy="32" r="20" stroke="currentColor" strokeWidth="1" strokeDasharray="1 2" />
-        <circle cx="32" cy="32" r="10" stroke="currentColor" strokeWidth="1" />
-        <path d="M32 12V52" stroke="currentColor" strokeWidth="1" />
-        <path d="M12 32H52" stroke="currentColor" strokeWidth="1" />
-        <circle cx="32" cy="32" r="4" fill="currentColor" fillOpacity="0.2" />
-      </svg>
-    ),
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" strokeWidth="1" />
-        <path d="M12 7V17M7 12H17" stroke="currentColor" strokeWidth="1" />
-      </svg>
-    ),
-    color: "bg-gradient-to-br from-forest-100 to-forest-200 border-l-4 border-forest-600",
-    texture: "bg-[url('/images/textures/papyrus.png')]"
+    color: "border border-gray-200 shadow-lg hover:shadow-xl"
   },
   {
     title: "Indigenous Wisdom",
     description: "Sustainable ways to engage in a decolonized dialogue with indigenous communities and repressed minorities, reclaiming a grounded approach to the sacred.",
-    symbol: (
-      <svg width="80" height="80" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-drawn">
-        <path d="M32 12C20.9543 12 12 20.9543 12 32C12 43.0457 20.9543 52 32 52" stroke="currentColor" strokeWidth="1" strokeDasharray="1 2" />
-        <path d="M32 52C43.0457 52 52 43.0457 52 32C52 20.9543 43.0457 12 32 12" stroke="currentColor" strokeWidth="1" strokeDasharray="1 2" />
-        <path d="M32 2L32 22" stroke="currentColor" strokeWidth="1" />
-        <path d="M28 6L32 2L36 6" stroke="currentColor" strokeWidth="1" />
-        <path d="M32 62L32 42" stroke="currentColor" strokeWidth="1" />
-        <path d="M36 58L32 62L28 58" stroke="currentColor" strokeWidth="1" />
-        <circle cx="32" cy="32" r="4" fill="currentColor" fillOpacity="0.2" />
-      </svg>
-    ),
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M8 3C8 5.20914 9.79086 7 12 7C14.2091 7 16 5.20914 16 3" stroke="currentColor" strokeWidth="1" />
-        <path d="M12 7V21" stroke="currentColor" strokeWidth="1" />
-        <path d="M8 21C8 18.7909 9.79086 17 12 17C14.2091 17 16 18.7909 16 21" stroke="currentColor" strokeWidth="1" />
-      </svg>
-    ),
-    color: "bg-gradient-to-br from-gold-200 to-gold-300 border-l-4 border-gold-600",
-    texture: "bg-[url('/images/textures/sand-grain.png')]"
+    color: "border border-gray-200 shadow-lg hover:shadow-xl"
   },
   {
     title: "Sovereignty & Autonomy",
     description: "Redefining togetherness and enhancing self-sufficiency and sovereignty without reliance on external power structures or obedience to overarching governmental systems.",
-    symbol: (
-      <svg width="80" height="80" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" className="hand-drawn">
-        <path d="M32 8L52 18V32C52 43.0457 43.0457 52 32 52C20.9543 52 12 43.0457 12 32V18L32 8Z" stroke="currentColor" strokeWidth="1" strokeDasharray="1 2" />
-        <circle cx="32" cy="32" r="10" stroke="currentColor" strokeWidth="1" />
-        <path d="M32 22V42" stroke="currentColor" strokeWidth="1" />
-        <path d="M22 32H42" stroke="currentColor" strokeWidth="1" />
-        <circle cx="32" cy="32" r="4" fill="currentColor" fillOpacity="0.2" />
-      </svg>
-    ),
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 2L20 8V16L12 22L4 16V8L12 2Z" stroke="currentColor" strokeWidth="1" />
-        <path d="M12 8V16" stroke="currentColor" strokeWidth="1" />
-        <path d="M8 12H16" stroke="currentColor" strokeWidth="1" />
-      </svg>
-    ),
-    color: "bg-gradient-to-br from-terracotta-200 to-terracotta-300 border-l-4 border-terracotta-600",
-    texture: "bg-[url('/images/textures/handmade-paper.png')]"
+    color: "border border-gray-200 shadow-lg hover:shadow-xl"
   }
 ];
 
@@ -193,62 +126,22 @@ export default function VisionSection() {
   };
 
   return (
-    <section ref={sectionRef} id="about" className="py-32 relative overflow-hidden sacred-gradient-moon bg-earth-50/70">
-      {/* Background organic shapes */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-1/2 h-1/2 opacity-[0.12]">
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-            <path fill="var(--color-night-earth)" d="M48.2,-63.8C62.7,-55.9,74.9,-42.8,78.2,-27.7C81.5,-12.7,75.9,4.2,69.3,19.2C62.7,34.1,55.1,47.1,43.4,54.6C31.7,62.1,15.9,64,-0.2,64.3C-16.2,64.5,-32.5,63.1,-45.4,55.3C-58.3,47.6,-67.9,33.4,-72.4,17.5C-76.8,1.6,-76.2,-16,-68.7,-29C-61.2,-42.1,-46.8,-50.6,-32.9,-58.5C-19,-66.5,-5.5,-73.9,8.3,-73.5C22.2,-73.1,33.7,-71.8,48.2,-63.8Z" transform="translate(100 100)" />
-          </svg>
-        </div>
-        
-        <div className="absolute bottom-0 left-0 w-3/5 h-3/5 opacity-[0.10]">
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-            <path fill="var(--color-clay)" d="M44.9,-64.2C58.3,-53.9,69.5,-41.1,74,-26.3C78.5,-11.5,76.5,5.4,71.5,20.8C66.5,36.2,58.5,50.1,46.5,60.1C34.5,70.1,18.5,76.1,1.1,74.7C-16.3,73.3,-35,64.5,-50.9,52.2C-66.8,39.9,-80,24.1,-83.2,6.7C-86.4,-10.7,-79.5,-29.7,-67.2,-43.3C-54.9,-56.9,-37.1,-65.1,-21,-69.5C-4.9,-73.9,9.5,-74.6,23.3,-71.9C37.1,-69.3,50.3,-63.4,63.5,-53.5Z" transform="translate(100 100)" />
-          </svg>
-        </div>
-      </div>
-
-      {/* Enhanced decorative sacred circles and elements */}
-      <div className="absolute left-[15%] top-[15%] w-32 h-32 border-2 border-gold-600/30 rounded-full rotate-45 opacity-70 mix-blend-overlay"></div>
-      <div className="absolute right-[10%] bottom-[20%] w-40 h-40 border border-gold-600/30 rounded-full rotate-12 opacity-50 mix-blend-overlay"></div>
-      <div className="absolute left-[3%] bottom-[15%] w-20 h-20 border border-gold-600/40 rounded-full animate-pulse opacity-30 mix-blend-overlay"></div>
-      <div className="absolute right-[25%] top-[10%] w-24 h-24 border-2 border-earth-600/20 rounded-full opacity-40 mix-blend-overlay"></div>
-      
-      {/* Enhanced Sacred glyph */}
-      <div className="sacred-glyph left-[5%] top-[30%] w-40 h-40 opacity-50 mix-blend-overlay">
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="50" cy="50" r="40" fill="none" stroke="var(--color-clay)" strokeWidth="0.5" />
-          <path d="M50 10 L50 90 M10 50 L90 50" stroke="var(--color-clay)" strokeWidth="0.5" fill="none" />
-          <path d="M29 29 L71 71 M29 71 L71 29" stroke="var(--color-clay)" strokeWidth="0.5" fill="none" />
-        </svg>
-      </div>
-
-      <div className="max-w-6xl mx-auto px-4 relative z-10">
+    <section ref={sectionRef} id="about" className="py-32">
+      <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
-          <span className="inline-block text-earth-600 uppercase tracking-[0.25em] text-sm font-medium mb-4">Our Vision</span>
-          <h2 ref={titleRef} className="section-heading">A Regenerative Vision for Sovereign Living</h2>
-          <p ref={introRef} className="text-lg md:text-xl text-earth-800 max-w-3xl mx-auto leading-relaxed">
+          <span className="inline-block text-black-600 uppercase tracking-wider text-sm font-semibold mb-4">Our Vision</span>
+          <h2 ref={titleRef} className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent mb-6">A Regenerative Vision for Sovereign Living</h2>
+          <p ref={introRef} className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Creation of an intentional regenerative community dedicated to protecting human integrity and sovereign birthrights: freedom, bodily autonomy, spiritual self-determination, and the right to live in harmony with nature.
           </p>
         </div>
         
-        {/* Quote box with enhanced styling for mobile */}
+        {/* Quote section */}
         <div 
           ref={quoteRef} 
-          className="sacred-callout mb-16 text-center backdrop-blur-sm relative overflow-hidden"
+          className="mb-16 text-center p-8 rounded-2xl border border-gray-200 shadow-lg"
         >
-          {/* Added decorative symbol behind the quote for visual richness */}
-          <div className="absolute -top-10 -right-10 w-40 h-40 opacity-5 text-earth-900">
-            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="0.5" />
-              <circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" strokeWidth="0.5" />
-              <circle cx="50" cy="50" r="25" fill="none" stroke="currentColor" strokeWidth="0.5" />
-              <path d="M50 5 L50 95 M5 50 L95 50 M15 15 L85 85 M15 85 L85 15" stroke="currentColor" strokeWidth="0.3" />
-            </svg>
-          </div>
-          
-          <p className="font-serif text-xl md:text-2xl text-earth-900 max-w-2xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-800 max-w-2xl mx-auto leading-relaxed font-medium">
             A regenerative, heart-led social project dedicated to future generations and the defense of human integrity. A community made to radiate outward and plant seeds of change, rather than being an isolated bubble.
           </p>
         </div>
@@ -264,19 +157,18 @@ export default function VisionSection() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7, delay: index * 0.15 }}
               whileHover={{ y: -5, boxShadow: "0 15px 30px rgba(0,0,0,0.07)" }}
-              className={`rounded-xl overflow-hidden ${pillar.color} p-6 md:p-8 shadow-sm hover:shadow-xl transition-all duration-500 backdrop-blur-sm min-h-[280px] md:even:mt-4 lg:even:mt-0 ${pillar.texture} bg-blend-overlay`}
+              className={`rounded-2xl ${pillar.color} p-6 md:p-8 transition-all duration-500 min-h-[320px] group hover:-translate-y-2`}
             >
-              <div className="flex justify-center mb-5">
-                <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center text-earth-600">
-                  {pillar.symbol}
+              <div className="flex justify-center mb-6">
+                <div className="w-16 h-16 flex items-center justify-center text-black-600 rounded-2xl group-hover:bg-blue-50 transition-colors duration-300">
                 </div>
               </div>
               
-              <h3 className="text-xl md:text-2xl font-serif font-medium text-earth-900 mb-4 text-center">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center group-hover:text-black-600 transition-colors duration-300">
                 {pillar.title}
               </h3>
               
-              <p className="text-earth-700 leading-relaxed text-center">
+              <p className="text-gray-600 leading-relaxed text-center text-sm md:text-base">
                 {pillar.description}
               </p>
             </motion.div>

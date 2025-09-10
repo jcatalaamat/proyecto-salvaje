@@ -40,11 +40,11 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-earth-50/90 backdrop-blur-sm fixed w-full z-50">
+    <nav className="bg-white/95 backdrop-blur-sm fixed w-full z-50 border-b border-gray-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
-            <a href="/" className="text-2xl font-serif font-bold text-earth-900">
+            <a href="/" className="text-2xl font-bold text-gray-900">
               Proyecto Salvaje
             </a>
           </div>
@@ -58,14 +58,14 @@ export default function Navbar() {
                 className={`${
                   (link.href === '#' && activeSection === '') || 
                   (link.href !== '#' && activeSection === link.href.substring(1))  
-                    ? 'text-earth-700 border-b-2 border-earth-500' 
-                    : 'text-earth-700 hover:text-earth-500'
+                    ? 'text-gray-900 border-b-2 border-gray-900' 
+                    : 'text-gray-600 hover:text-gray-900'
                 } text-sm font-medium transition duration-150`}
               >
                 {link.name}
               </a>
             ))}
-            <a href="#contact-form" className="btn-primary text-sm">
+            <a href="#contact-form" className="bg-gray-900 text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors">
               Contact
             </a>
           </div>
@@ -74,7 +74,7 @@ export default function Navbar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-earth-700 hover:text-earth-500 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 focus:outline-none"
               aria-expanded={isMenuOpen}
             >
               <span className="sr-only">Open main menu</span>
@@ -95,7 +95,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-earth-50">
+        <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
               <a
@@ -105,8 +105,8 @@ export default function Navbar() {
                 className={`${
                   (link.href === '#' && activeSection === '') || 
                   (link.href !== '#' && activeSection === link.href.substring(1))
-                    ? 'bg-earth-100 text-earth-700'
-                    : 'text-earth-700 hover:bg-earth-50 hover:text-earth-500'
+                    ? 'bg-gray-100 text-gray-900'
+                    : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                 } block px-3 py-2 rounded-md text-base font-medium`}
               >
                 {link.name}
@@ -115,7 +115,7 @@ export default function Navbar() {
             <a
               href="#contact-form"
               onClick={() => setIsMenuOpen(false)}
-              className="block px-3 py-2 text-base font-medium text-white bg-earth-500 rounded-md"
+              className="block px-3 py-2 text-base font-medium text-white bg-gray-900 rounded-md"
             >
               Contact
             </a>
