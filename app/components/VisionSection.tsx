@@ -159,10 +159,10 @@ export default function VisionSection() {
               whileHover={{ y: -5, boxShadow: "0 15px 30px rgba(0,0,0,0.07)" }}
               className={`rounded-2xl ${pillar.color} p-6 md:p-8 transition-all duration-500 min-h-[320px] group hover:-translate-y-2`}
             >
-              <div className="flex justify-center mb-6">
+              {/* <div className="flex justify-center mb-6">
                 <div className="w-16 h-16 flex items-center justify-center text-black-600 rounded-2xl group-hover:bg-blue-50 transition-colors duration-300">
                 </div>
-              </div>
+              </div> */}
               
               <h3 className="text-xl font-bold text-gray-900 mb-4 text-center group-hover:text-black-600 transition-colors duration-300">
                 {pillar.title}
